@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Style1.css">
+    <title>medsense@nanoscal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Prof. Vinay Sharma</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research Area</a>
+            <div class="dropdown">
+                <a href="#">People</a>
+                <div class="dropdown-content">
+                    <a href="Group_leader.html">Group Leader</a>
+                    <a href="team.html">Lab Members</a>
+                </div>
+            </div>
+            <a href="journey.html">Our Journey</a>
+            <div class="dropdown">
+                <a href="#">Publications</a>
+                <div class="dropdown-content">
+                    <a href="publication.html">Journal</a>
+                    <a href="publication.html">Book Chapter</a>
+                </div>
+            </div>
+            <a href="equipment.html">Equipment</a>
+            <a href="opening.html">Openings</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+
+    <br>
+    <section>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">Prev</button>
+            <div class="carousel-slide">
+                <img class="carousel-image" src="Images/cl1.jpg" alt="Image 1">
+                <img class="carousel-image" src="Images/cl2.jpg" alt="Image 2">
+                <img class="carousel-image" src="Images/cl3.jpg" alt="Image 7">
+                <img class="carousel-image" src="Images/cl4.jpg" alt="Image 3">
+                <img class="carousel-image" src="Images/cl5.jpg" alt="Image 3">
+            </div>
+            <button class="carousel-btn next-btn" onclick="changeSlide(1)">Next</button>
+        </div>
+    </section>
+    <br>
+
+    <div class="banner">
+        <h1>Welcome to the BioEngineering for Translational Applications Laboratory (BETA Lab)</h1>
+        <p>The BETA Lab pioneers advancements in functional biomaterials and biofabrication, driving innovation in
+            tissue engineering, regenerative medicine, and therapeutic solutions.</p>
+    </div>
+
+    <div class="gallery-header">
+        <h2>Cover Gallery</h2>
+    </div>
+
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Images/book1.jpg" alt="Cover 1">
+            <div class="caption">Cover 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/book2.jpg" alt="Cover 2">
+            <div class="caption">Cover 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/book3.jpg" alt="Cover 3">
+            <div class="caption">Cover 3</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/book4.jpg" alt="Cover 4">
+            <div class="caption">Cover 4</div>
+        </div>
+    </div>
+
+    <section class="updates">
+        <h2>Updates</h2>
+        <ul>
+            <li>February 2025: Excited to welcome Alex and Priya to our research team.</li>
+            <li>December 2024: Dr. Smith delivered a keynote speech at the Global BioTech Summit in Berlin.</li>
+            <li>November 2024: Our latest research on biofabrication was published in the Journal of Biomedical
+                Engineering.</li>
+            <li>July 2024: Secured a research grant for developing next-gen biomaterials in collaboration with Dr. Emily
+                Carter's lab.</li>
+        </ul>
+    </section>
+
+
+
+    <footer>
+        <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
+            <a target="_blank" href="#" i class="fa-brands fa-linkedin"></i>
+                <a target="_blank" href="#" i class="fa-brands fa-twitter"></i>
+
+                    <a target="_blank" href="https://scholar.google.com/citations?user=YOUR_ID">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+                            alt="Google Scholar" width="18" height="18">
+                    </a>
+
+                    <p>&copy; 2025 All rights reserved.</p>
+
+                    <div id="scrollUp">
+                        <i class="fa fa-angle-up"></i>
+                    </div>
+    </footer>
+
+    <script src="javastyle.js"></script>
+</body>
+
+</html>
