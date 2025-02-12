@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="Style1.css">
+      <title>Journey</title>
+
+      <style>
+            .section {
+                  margin: 20px auto;
+                  max-width: 800px;
+                  text-align: center;
+            }
+
+            .timeline {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 20px;
+                  margin-top: 20px;
+            }
+
+            .event {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  background-color: #f9f9f9;
+            }
+
+            .event img {
+                  max-width: 100%;
+                  border-radius: 8px;
+            }
+
+            .event p {
+                  margin-top: 10px;
+                  font-size: 14px;
+            }
+
+      </style>
+</head>
+
+<body>
+
+      <div class="navbar">
+            <div class="logo">Prof. Vinay Sharma</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+            </div>
+            <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="research.html">Research Area</a>
+                  <div class="dropdown">
+                        <a href="#">People</a>
+                        <div class="dropdown-content">
+                              <a href="Group_leader.html">Group Leader</a>
+                              <a href="team.html">Lab Members</a>
+                        </div>
+                  </div>
+                  <a href="journey.html">Our Journey</a>
+                  <div class="dropdown">
+                        <a href="#">Publications</a>
+                        <div class="dropdown-content">
+                              <a href="publication.html">Journal</a>
+                              <a href="publication.html">Book Chapter</a>
+                        </div>
+                  </div>
+                  <a href="equipment.html">Equipment</a>
+                  <a href="opening.html">Openings</a>
+                  <a href="contact.html">Contact</a>
+            </div>
+      </div>
+
+      <script>
+            function toggleMenu() {
+                  document.querySelector(".nav-links").classList.toggle("active");
+            }
+      </script>
+
+      <section>
+            <div class="section" id="journey">
+                  <h2>Our Beginning in 2025</h2>
+                  <div class="timeline">
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="Empty workspace">
+                              <p>Oct. 2023 - The workspace was set, waiting for innovation!</p>
+                        </div>
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="First equipment setup">
+                              <p>Nov. 2023 - Setting up our first polymer testing machine.</p>
+                        </div>
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="First team brainstorm">
+                              <p>Dec. 2023 - First brainstorming session over coffee!</p>
+                        </div>
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="Group photo">
+                              <p>Nov. 2023 - Kicking off our journey as a team!</p>
+                        </div>
+                  </div>
+
+                  <h2>Our Growth in 2025</h2>
+                  <div class="timeline">
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="First grant celebration">
+                              <p>Mar. 2024 - Celebrating our first research grant with custom merch!</p>
+                        </div>
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="Team achievements">
+                              <p>Apr. 2024 - A milestone moment: Published our first research paper.</p>
+                        </div>
+                        <div class="event">
+                              <img src="Images/journey1.jpg" alt="Team lunch">
+                              <p>May 2024 - Bonding over a well-earned team lunch.</p>
+                        </div>
+                        <div class="event">
+                              <img src="https://via.placeholder.com/150" alt="Conference presentation">
+                              <p>Jul. 2024 - Presented our work at the Global Innovations Summit.</p>
+                        </div>
+                        <div class="event">
+                              <img src="https://via.placeholder.com/150" alt="Lab upgrades">
+                              <p>Aug. 2024 - Upgrading our lab with new technologies.</p>
+                        </div>
+                        <div class="event">
+                              <img src="https://via.placeholder.com/150" alt="Team expansion">
+                              <p>Sept. 2024 - Welcoming three new members to the team!</p>
+                        </div>
+                        <div class="event">
+                              <img src="https://via.placeholder.com/150" alt="Fun at Halloween">
+                              <p>Oct. 2024 - Halloween fun with themed lab costumes.</p>
+                        </div>
+                        <div class="event">
+                              <img src="https://via.placeholder.com/150" alt="Farewell party">
+                              <p>Dec. 2024 - Bidding farewell to our first graduate, Alex Carter.</p>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <footer>
+            <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
+                  <a target="_blank" href="#" i class="fa-brands fa-linkedin"></i>
+                        <a target="_blank" href="#" i class="fa-brands fa-twitter"></i>
+
+                              <a target="_blank" href="https://scholar.google.com/citations?user=YOUR_ID">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+                                          alt="Google Scholar" width="18" height="18">
+                              </a>
+
+                              <p>&copy; 2025 All rights reserved.</p>
+      </footer>
+
+      <!-- <div id="scrollUp">
+            <i class="fa fa-angle-up"></i>
+      </div> -->
+      <script src="javastyle.js"></script>
+
+</body>
+
+</html>

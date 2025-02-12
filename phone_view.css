@@ -1,0 +1,54 @@
+.navbar {
+      background-color: #003f87;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  /* ... (rest of your existing CSS) ... */
+  
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+          display: block;
+      }
+  
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 50px; /* Adjust as needed */
+          left: 0;
+          /* THIS IS THE KEY CHANGE */
+          background-color: rgba(0, 63, 135, 0.9); /* Slightly transparent background */
+          text-align: center;
+          padding: 10px 0;
+          /* Add a box shadow for better visibility */
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      .nav-links.active {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding-left: 20px;
+      }
+  
+      .nav-links a {
+          display: block;
+          padding: 15px;
+          width: 100%;
+          text-align: left;
+          color: #fff; /* Ensure text is white */
+      }
+  
+      /* Add hover effect for better UX */
+      .nav-links a:hover {
+          background-color: rgba(255, 255, 255, 0.2); /* Slightly white on hover */
+      }
+  }

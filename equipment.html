@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="Style1.css">
+      <title>Equipment</title>
+
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            .section {
+                  margin: 20px auto;
+                  max-width: 900px;
+                  text-align: center;
+            }
+
+            .equipment-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  gap: 20px;
+                  margin-top: 20px;
+            }
+
+            .equipment-item {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 15px;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  background-color: #f9f9f9;
+                  transition: box-shadow 0.3s ease;
+            }
+
+            .equipment-item:hover {
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .equipment-item img {
+                  width: 200px;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 8px;
+            }
+
+            .equipment-item h3 {
+                  margin: 15px 0 10px;
+                  font-size: 16px;
+                  color: #333;
+            }
+
+            .equipment-item p {
+                  font-size: 14px;
+                  color: #555;
+            }
+      </style>
+</head>
+
+<body>
+
+      <div class="navbar">
+            <div class="logo">Prof. Vinay Sharma</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+            </div>
+            <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="research.html">Research Area</a>
+                  <div class="dropdown">
+                        <a href="#">People</a>
+                        <div class="dropdown-content">
+                              <a href="Group_leader.html">Group Leader</a>
+                              <a href="team.html">Lab Members</a>
+                        </div>
+                  </div>
+                  <a href="journey.html">Our Journey</a>
+                  <div class="dropdown">
+                        <a href="#">Publications</a>
+                        <div class="dropdown-content">
+                              <a href="publication.html">Journal</a>
+                              <a href="publication.html">Book Chapter</a>
+                        </div>
+                  </div>
+                  <a href="equipment.html">Equipment</a>
+                  <a href="opening.html">Openings</a>
+                  <a href="contact.html">Contact</a>
+            </div>
+      </div>
+
+      <script>
+            function toggleMenu() {
+                  document.querySelector(".nav-links").classList.toggle("active");
+            }
+      </script>
+
+      <section>
+            <div class="section" id="equipment">
+                  <h2>Lab Equipment</h2>
+                  <div class="equipment-grid">
+                        <div class="equipment-item">
+                              <img src="Image/eq1.jpg" alt=" Haier 346L Bottom Mounted Refrigerator.">
+                              <h3> Haier 346L Bottom Mounted Refrigerator.</h3>
+                              <p>It's a household appliance used for storing food at low temperatures to prevent
+                                    spoilage.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq2.jpg"
+                                    alt="Thermo Scientific 1300 Series A2 Biological Safety Cabinet.">
+                              <h3>Thermo Scientific 1300 Series A2 Biological Safety Cabinet.</h3>
+                              <p>It's designed to protect lab workers and the environment from biohazards during
+                                    experimental procedures.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq3.jpg" alt="Thermo Scientific Sorvall ST 8 Centrifuge.">
+                              <h3>Thermo Scientific Sorvall ST 8 Centrifuge.</h3>
+                              <p>It's used to separate substances of different densities using centrifugal force in
+                                    laboratory settings.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq4.jpg" alt="Thermo Scientific Forma Steri-Cycle CO2 Incubator.">
+                              <h3>Thermo Scientific Forma Steri-Cycle CO2 Incubator.</h3>
+                              <p>It's used to maintain a controlled environment with stable temperature, humidity, and
+                                    CO2 levels for cell and tissue culture.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq5.jpg" alt="MAC Vertical Autoclave (Pro Series)">
+                              <h3>MAC Vertical Autoclave (Pro Series)</h3>
+                              <p>It's used for sterilizing equipment and solutions using high pressure and steam.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq6.jpg" alt=" Thermo Scientific 1500 Series Biological Safety Cabinet.">
+                              <h3> Thermo Scientific 1500 Series Biological Safety Cabinet.</h3>
+                              <p>Used for drying and sterilizing samples under controlled conditions.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image/eq7.jpg" alt="Remi CIS-18 Plus Bench Top Orbital Shaking Incubator">
+                              <h3>Remi CIS-18 Plus Bench Top Orbital Shaking Incubator</h3>
+                              <p>Specialized for creating molds and custom parts for dental and biomedical applications.
+                              </p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Images/equipment1.png" alt="Heat Press">
+                              <h3>Heat Press (TUSY)</h3>
+                              <p>Used for thermal transfer applications, ideal for lab labeling and prototyping.</p>
+                        </div>
+                        <div class="equipment-item">
+                              <img src="Image_equipment/1.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/2.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/3.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/4.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/5.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/6.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/7.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/8.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/9.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                        <div class="equipment-item">
+                              <img src="Image_equipment/10.jpg" alt="Centrifuge">
+                              <h3>Centrifuge (Eppendorf 5430R)</h3>
+                              <p>Offers high-speed separation for various sample preparations.</p>
+                        </div>
+
+                  </div>
+            </div>
+      </section>
+
+      <footer>
+            <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
+                  <a target="_blank" href="#" i class="fa-brands fa-linkedin"></i>
+                        <a target="_blank" href="#" i class="fa-brands fa-twitter"></i>
+
+                              <a target="_blank" href="https://scholar.google.com/citations?user=YOUR_ID">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+                                          alt="Google Scholar" width="18" height="18">
+                              </a>
+
+                              <p>&copy; 2025 All rights reserved.</p>
+
+                              <!-- <div id="scrollUp">
+                              <i class="fa fa-angle-up"></i>
+                        </div> -->
+      </footer>
+
+
+      <script src="javastyle.js"></script>
+
+</body>
+
+</html>

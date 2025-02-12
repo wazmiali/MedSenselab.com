@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <title>Document</title>
+      <link rel="stylesheet" href="Style1.css">
+
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  overflow-x: hidden;
+                 
+            }
+
+            .section {
+                  margin: 20px auto;
+                  max-width: 800px;
+                  text-align: center;
+                  font-family: Arial, sans-serif;
+            }
+
+            .opening-content {
+                  margin-top: 20px;
+            }
+
+            .opening-content img {
+                  width: 100%;
+                  height: auto;
+                  border-radius: 10px;
+            }
+
+            .caption {
+                  font-size: 14px;
+                  color: #777;
+                  margin: 10px 0;
+            }
+
+            ul {
+                  list-style-type: disc;
+                  margin: 20px auto;
+                  text-align: left;
+                  max-width: 600px;
+            }
+
+            ul li {
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                  color: #333;
+            }
+
+            .contact {
+                  margin-top: 20px;
+                  font-size: 16px;
+                  color: #333;
+            }
+
+            .contact .email {
+                  color: #d9534f;
+                  font-weight: bold;
+            }
+
+      </style>
+</head>
+
+<body>
+      <div class="navbar">
+            <div class="logo">Prof. Vinay Sharma</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+            </div>
+            <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="research.html">Research Area</a>
+                  <div class="dropdown">
+                        <a href="#">People</a>
+                        <div class="dropdown-content">
+                              <a href="Group_leader.html">Group Leader</a>
+                              <a href="team.html">Lab Members</a>
+                        </div>
+                  </div>
+                  <a href="journey.html">Our Journey</a>
+                  <div class="dropdown">
+                        <a href="#">Publications</a>
+                        <div class="dropdown-content">
+                              <a href="publication.html">Journal</a>
+                              <a href="publication.html">Book Chapter</a>
+                        </div>
+                  </div>
+                  <a href="equipment.html">Equipment</a>
+                  <a href="opening.html">Openings</a>
+                  <a href="contact.html">Contact</a>
+            </div>
+      </div>
+
+      <script>
+            function toggleMenu() {
+                  document.querySelector(".nav-links").classList.toggle("active");
+            }
+      </script>
+
+      <section>
+            <div class="section" id="openings">
+                  <h2>Join Our Research Team</h2>
+                  <div class="opening-content">
+                        <img src="Images/IIt.png" alt="Campus Image">
+                        <p class="caption">Beautiful campus view. [Image courtesy of Placeholder University]</p>
+                        <ul>
+                              <li>We have multiple Ph.D. positions available in the field of advanced materials
+                                    research.</li>
+                              <li>We encourage collaboration with visiting researchers and scholars worldwide.</li>
+                              <li>Undergraduate students passionate about innovation are welcome to explore project
+                                    opportunities.</li>
+                        </ul>
+                        <p class="contact">
+                              <strong>Interested applicants</strong>, please email your CV and a cover letter to Dr.
+                              Smith at <span class="email">drsmith[at]placeholder.edu</span>.
+                        </p>
+                  </div>
+            </div>
+      </section>
+
+      <footer>
+            <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
+                <a target="_blank" href="#" i class="fa-brands fa-linkedin"></i>
+                    <a target="_blank" href="#" i class="fa-brands fa-twitter"></i>
+    
+                        <a target="_blank" href="https://scholar.google.com/citations?user=YOUR_ID">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+                                alt="Google Scholar" width="18" height="18">
+                        </a>
+    
+                        <p>&copy; 2025 All rights reserved.</p>
+        </footer>
+
+      <!-- <div id="scrollUp">
+            <i class="fa fa-angle-up"></i>
+      </div> -->
+      <script src="javastyle.js"></script>
+
+</body>
+
+</html>
