@@ -7,151 +7,103 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
       <link rel="icon" type="image/png" sizes="32x32" href="lab_img/web_logo.png">
       <link rel="stylesheet" href="Style1.css">
+      <!-- <link rel="stylesheet" href="team_style.css"> -->
       <title>MedSense Lab</title>
       <style>
-            .section {
-                  padding: 2rem;
-                  max-width: 1200px;
-                  margin: auto;
-            }
-
-            .section h2 {
-                  border-bottom: 2px solid #444;
-                  padding-bottom: 0.5rem;
-                  margin-bottom: 1rem;
-            }
-
-            .profile {
+            /* Container for columns */
+            [data-testid="columns"] {
                   display: flex;
+                  justify-content: space-between;
                   align-items: flex-start;
-                  gap: 24px;
-                  margin-bottom: 2rem;
-                  background-color: white;
-                  padding: 1rem;
-                  border-radius: 8px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  gap: 20px;
+                  padding: 20px;
+                  background-color: #f8f9fa;
             }
 
-            .profile img {
-                  width: auto;
-                  height: 257px;
-                  /* width: 150px;
-                  height: 150px; */
-                  object-fit: cover;
-                  border-radius: 2px;
+            /* Column styling */
+            .wixui-column-strip__column {
+                  width: 48%;
+                  padding: 10px;
+                  background-color: #ffffff;
+                  box-shadow: none;
             }
 
-            .profile-content {
-                  flex-grow: 1;
+            /* Styling for background layers */
+            .MW5IWV {
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  background-color: transparent;
             }
 
-            .profile-content h3 {
-                  margin: 0;
-                  color: black;
+            /* Text styling */
+            h2.font_2 {
+                  font-size: 28px;
+                  font-weight: bold;
+                  color: #333333;
+                  text-align: left;
             }
 
-            .profile-content p {
-                  margin: 0.5rem 0;
+            p.font_4 {
+                  font-size: 20px;
+                  font-family: 'EB Garamond', serif;
+                  color: #a2230a;
+                  margin: 0 0 10px 0;
             }
 
-            .buttons {
-                  margin-top: 0.5rem;
-            }
-
-            .buttons button {
-                  margin-right: 0.5rem;
-                  padding: 0.5rem 1rem;
-                  border: none;
-                  border-radius: 4px;
-                  background-color: #00c0ef;
-                  color: white;
-                  cursor: pointer;
-            }
-
-            .buttons button:hover {
-                  background-color: #666;
-            }
-
-            .para p {
-                  margin: 0.5rem 0;
+            p.font_8 {
+                  font-size: 18px;
+                  line-height: 1.75em;
                   text-align: justify;
-                  font-family: Calibri, sans-serif;
-                  font-size: 1.2rem;
+                  color: #666666;
+                  font-family: 'Arial', sans-serif;
             }
 
+            /* Image container */
+            .MazNVa {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  height: auto;
+                  overflow: hidden;
+            }
 
-            /* Media Queries for Mobile Devices */
+            /* Image styling */
+            .wow-image img,
+            .wixui-column-strip__column img {
+                  width: 100%;
+                  height: auto;
+                  object-fit: cover;
+                  box-shadow: none;
+                  object-position: center;
+            }
+
+            /* General layout adjustments for responsiveness */
             @media (max-width: 768px) {
-                  .profile {
+                  [data-testid="columns"] {
                         flex-direction: column;
-                        /* Stack image and content vertically */
                         align-items: center;
-                        /* Center-align items */
-                        gap: 16px;
-                        /* Reduce gap between items */
                   }
 
-                  .profile img {
-                        width: 90%;
-                        /* Set image width to 90% of the container */
-                        height: auto;
-                        /* Maintain aspect ratio */
-                  }
-
-                  .profile-content {
+                  /* Ensure the image is above the content */
+                  .wixui-column-strip__column {
+                        width: 100%;
                         text-align: center;
-                        /* Center-align text */
-                  }
-
-                  .buttons {
                         display: flex;
-                        justify-content: center;
-                        /* Center-align buttons */
-                        flex-wrap: wrap;
-                        /* Allow buttons to wrap to the next line */
+                        flex-direction: column;
+                        align-items: center;
                   }
 
-                  .buttons button {
-                        margin: 0.25rem;
-                        /* Reduce margin between buttons */
-                  }
-
-                  .para p {
-                        font-size: 1rem;
-                        /* Reduce font size for better readability */
-                  }
-
-                  .section {
-                        padding: 1rem;
-                        /* Reduce padding for smaller screens */
-                  }
-
-                  .section h2 {
-                        font-size: 1.5rem;
-                        /* Reduce heading size */
-                  }
-            }
-
-            /* Media Query for Very Small Screens (e.g., 327px) */
-            @media (max-width: 327px) {
-                  footer {
-                        padding: 0.5rem;
-                        /* Reduce padding for very small screens */
-                  }
-
-                  footer a {
-                        margin: 0 0.25rem;
-                        /* Reduce margin between icons */
-                        font-size: 0.8rem;
-                        /* Reduce icon size */
-                  }
-
-                  footer p {
-                        font-size: 0.8rem;
-                        /* Reduce text size */
+                  /* Center the text underneath the image */
+                  h2.font_2,
+                  p.font_4,
+                  p.font_8 {
+                        text-align: center;
                   }
             }
       </style>
+
 </head>
 
 <body>
@@ -174,7 +126,7 @@
                         <a href="index.html">Home</a>
                         <a href="research.html">Research Area</a>
                         <div class="dropdown">
-                              <a href="#">People</a>
+                              <a href="#">Team</a>
                               <div class="dropdown-content">
                                     <a href="Group_leader.html">Group Leader</a>
                                     <a href="team.html">Lab Members</a>
@@ -201,116 +153,169 @@
             </script>
       </section>
 
-      <section>
-            <div class="section" id="pi">
-                  <h2>Principal Investigator</h2>
-                  <div class="profile">
-                        <img src="Image_team/Sir.jpeg" alt="Dr. Olivia Carter">
-                        <div class="profile-content">
-                              <h3>Dr.Vinay Sharma </h3>
-                              <p><strong>Group Leader</strong></p>
-                              <div class="para">
 
-                                    <p>Our research group focuses on nanotechnology applications in bioengineering, with
+      <div data-testid="columns" class="V5AUxf">
+            <div id="comp-jxpz2cj12" class="comp-jxpz2cj12 YzqVVZ wixui-column-strip__column">
+                  <div data-mesh-id="comp-jxpz2cj12inlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-jxpz2cj12inlineContent-gridContainer"
+                              data-testid="mesh-container-content">
+                              <div id="comp-jxpz2cj2" class="MazNVa comp-jxpz2cj2 wixui-image">
+                                    <div data-testid="linkElement" class="j7pOnl">
+                                          <img src="Image_team/Sir1.jpeg" alt="AJ Portrait.jpg" width="460" height="400"
+                                                style="width: 460px; height: 400px; object-fit: cover;">
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div id="comp-jxpz2cj3" class="comp-jxpz2cj3 YzqVVZ wixui-column-strip__column">
+                  <div data-mesh-id="comp-jxpz2cj3inlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-jxpz2cj3inlineContent-gridContainer"
+                              data-testid="mesh-container-content">
+                              <div id="comp-jxpz2cj31"
+                                    class="HcOXKn SxM0TO QxJLC3 lq2cno YQcXTT comp-jxpz2cj31 wixui-rich-text"
+                                    data-testid="richTextElement">
+                                    <h2 class="font_2 wixui-rich-text__text"
+                                          style="line-height:1.375em; text-align:left; font-size:28px;">
+                                          Dr. Vinay Sharma
+                                    </h2>
+                              </div>
+                              <div id="comp-jyaes58u"
+                                    class="HcOXKn SxM0TO QxJLC3 lq2cno YQcXTT comp-jyaes58u wixui-rich-text"
+                                    data-testid="richTextElement">
+                                    <p class="font_4 wixui-rich-text__text" style="font-size:20px; color: #A2230A;">
+                                          Team Leader</p>
+                              </div>
+                              <div id="comp-jxpz2cj32"
+                                    class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-jxpz2cj32 wixui-rich-text"
+                                    data-testid="richTextElement">
+                                    <p class="font_8 wixui-rich-text__text"
+                                          style="line-height:1.75em; text-align:left; font-size:18px;">
+                                          Our research group focuses on nanotechnology applications in bioengineering,
+                                          with
                                           an
                                           emphasis on developing innovative technologies at the nanoscale and exploring
                                           their
-                                          biomedical applications. Key areas of research include:</p>
-                                    <p>1.Technology Development at Nanoscale: Portable Diagnostics, Biosensors, Single
-                                          molecule/Single Cell Techniques etc.</p>
-                                    <p>2. Biomedical Applications of Nanostructures: Bioimaging, AMR, Cancer Therapy,
+                                          biomedical applications. Key areas of research include:
+                                    </p>
+
+                                    <p class="font_8 wixui-rich-text__text"
+                                          style="line-height:1.75em; text-align:left; font-size:18px;">
+                                          1.Technology Development at Nanoscale: Portable Diagnostics, Biosensors,
+                                          Single
+                                          molecule/Single Cell Techniques etc.
+                                    </p>
+                                    <p class="font_8 wixui-rich-text__text"
+                                          style="line-height:1.75em; text-align:left; font-size:18px;">
+                                          2. Biomedical Applications of Nanostructures: Bioimaging, AMR, Cancer Therapy,
                                           Gene
-                                          Therapy etc.</p>
-                                    <p>With a strong interdisciplinary approach, our lab integrates biotechnology,
+                                          Therapy etc.
+                                    </p>
+                                    <p class="font_8 wixui-rich-text__text"
+                                          style="line-height:1.75em; text-align:left; font-size:18px;">
+                                          With a strong interdisciplinary approach, our lab integrates biotechnology,
                                           nanotechnology, electronics, chemistry, and materials science to create
                                           healthcare
-                                          solutions that are both accessible and affordable.</p>
+                                          solutions that are both accessible and affordable.
+                                    </p>
+
                               </div>
-                              <div class="buttons">
-                                    <a target="_blank" href="mailto:vinay.sharma@iitjammu.ac.in">
-                                          <button>Email</button>
-                                    </a>
-                                    <button>LinkedIn</button>
-                                    <!-- <button>ResearchGate</button> -->
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <br>
+      
+      <section>
+            <div data-testid="columns" class="V5AUxf">
+                  <div class="wixui-column-strip__column">
+                        <div class="MW5IWV">
+                              <div class="LWbAav Kv1aVt"></div>
+                        </div>
+                        <div>
+                              <div>
+                                    <h2 class="font_2">Khushboo Warjurkar</h2>
+                                    <p class="font_4">Research Scholar</p>
+                                    <p class="font_8">Nanomaterial for Biomedical Application</p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="wixui-column-strip__column">
+                        <div class="MW5IWV">
+                              <div class="LWbAav Kv1aVt"></div>
+                        </div>
+                        <div>
+                              <div>
+                                    <img src="Image_team/Khushboo1.jpeg" alt="Shounak Roy"
+                                          style="width: 452px; height: 398px; object-fit: cover; border-radius: 3px;" />
                               </div>
                         </div>
                   </div>
             </div>
 
-            <div class="section" id="grad">
-                  <h2>Research Scholars</h2>
-                  <div class="profile">
-                        <img src="Image_team/Khushboo.jpeg" alt="Dr. Olivia Carter">
-                        <div class="profile-content">
-                              <h3>Khushboo Warjurkar</h3>
-                              <div class="para">
-                                    <p>Research Area</p>
-                                    <p>Nanomaterial for Biomedical Application.</p>
-                              </div>
-                              <div class="buttons">
-                                    <button>Email</button>
-                                    <!-- <a target="_blank" href="">
-                                    </a> -->
-                                    <button>LinkedIn</button>
-                                    <button>ResearchGate</button>
+      </section>      
+
+      <section>
+            <div data-testid="columns">
+                  <div class="wixui-column-strip__column">
+                        <div>
+                              <img src="Image_team/kaifi_ali.jpg" alt="Ankita Portrait"
+                                    style="width: 400px; height: 400px; object-fit: cover; border-radius: 3px;" />
+                        </div>
+                  </div>
+                  <div class="wixui-column-strip__column">
+                        <h2 class="font_2">Kaifi Ali</h2>
+                        <p class="font_4">Research Scholar</p>
+                        <p class="font_8">
+                              Electroceuticals for wound management and monitoring.</p>
+                  </div>
+            </div>
+      </section>
+
+
+      <section>
+            <div data-testid="columns" class="V5AUxf">
+                  <div class="wixui-column-strip__column">
+                        <div class="MW5IWV">
+                              <div class="LWbAav Kv1aVt"></div>
+                        </div>
+                        <div>
+                              <div>
+                                    <h2 class="font_2">Rajan Patyal</h2>
+                                    <p class="font_4">Research Scholar</p>
+                                    <p class="font_8">Nanotheranostics.</p>
                               </div>
                         </div>
                   </div>
-
-                  <div class="profile">
-                        <img src="Image_team/Rajan1.jpg" alt="Dr. Olivia Carter">
-                        <div class="profile-content">
-                              <h3>Rajan Patyal</h3>
-
-                              <div class="para">
-                                    <p>Research Area</p>
-                                    <p>Nanotheranostics.</p>
-                              </div>
-                              <div class="buttons">
-                                    <button>Email</button>
-                                    <!-- <a target="_blank" href="">
-                                    </a> -->
-                                    <button>LinkedIn</button>
-                                    <button>ResearchGate</button>
+                  <div class="wixui-column-strip__column">
+                        <div class="MW5IWV">
+                              <div class="LWbAav Kv1aVt"></div>
+                        </div>
+                        <div>
+                              <div>
+                                    <img src="Image_team/Rajan3.jpg" alt="Shounak Roy"
+                                          style="width: 452px; height: 398px; object-fit: cover; border-radius: 3px;" />
                               </div>
                         </div>
                   </div>
+            </div>
 
-                  <div class="profile">
-                        <img src="Image_team/Sathya.jpeg" alt="Sathya Prakash K">
-                        <div class="profile-content">
-                              <h3>Sathya Prakash K.</h3>
+      </section>
 
-                              <div class="para">
-                                    <p>Research Area</p>
-                                    <p>Nanotheranostics.</p>
-                              </div>
-                              <div class="buttons">
-                                    <button>Email</button>
-                                    <!-- <a target="_blank" href="">
-                                    </a> -->
-                                    <button>LinkedIn</button>
-                                    <button>ResearchGate</button>
-                              </div>
+      <section>
+            <div data-testid="columns">
+                  <div class="wixui-column-strip__column">
+                        <div>
+                              <img src="Image_team/Sathya.jpeg" alt="Ankita Portrait"
+                                    style="width: 400px; height: 400px; object-fit: cover; border-radius: 3px;" />
                         </div>
                   </div>
-
-                  <div class="profile">
-                        <img src="Image_team/Kaifi.jpeg" alt="Kaifi.jpeg">
-                        <div class="profile-content">
-                              <h3>Kaifi Ali</h3>
-
-                              <div class="para">
-                                    <p>Research Area</p>
-                                    <p>Electroceuticals for wound management and monitoring.</p>
-                              </div>
-                              <div class="buttons">
-                                    <button>Email</button>
-                                    <a target="_blank"
-                                          href="https://www.linkedin.com/in/kaifi-ali/"><button>LinkedIn</button></a>
-                                    <button>ResearchGate</button>
-                              </div>
-                        </div>
+                  <div class="wixui-column-strip__column">
+                        <h2 class="font_2">Sathya Prakash K.</h2>
+                        <p class="font_4">Research Scholar</p>
+                        <p class="font_8">
+                              Nanotheranostics.</p>
                   </div>
             </div>
       </section>
