@@ -74,10 +74,12 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 10px;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     text-decoration: none;
+    color: #ff9900;
 }
 
 .dropdown {
