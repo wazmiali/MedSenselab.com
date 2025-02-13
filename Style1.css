@@ -11,6 +11,40 @@ body {
     box-sizing: border-box;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 77px;
+}
+
+.logo {
+    height: auto;
+    width: 10%;
+}
+
+.left-logo {
+    margin-right: auto;
+    height: 73px;
+    width: 17%;
+}
+
+.right-logo {
+    margin-right: 10px;
+    width: 17%;
+    height: 73px;
+}
+
+.center1-text {
+    text-align: right;
+    flex-grow: 1;
+    margin: 20px;
+    color: #000000c9;
+    font-family: auto;
+}
+
+
 
 .navbar {
     background-color: #003f87;
@@ -31,7 +65,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
 }
@@ -173,7 +207,7 @@ body {
 
 .updates ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
 }
 
 .updates ul li {
@@ -355,29 +389,6 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003f87de;
-    color: white;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-}
-
-footer img {
-    vertical-align: middle;
-} */
-
-
-
-
-
-
 
 
 footer {
@@ -452,32 +463,7 @@ footer img {
 }
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 600px) {
-    /* #scrollUp {
-        bottom: 20px;
-        right: 10px;
-        padding: 8px 12px;
-        font-size: 20px;
-    }
-
-    footer a {
-        font-size: 16px;
-        margin: 5px 0;
-        display: block;
-    }
-
-    footer p {
-        font-size: 12px;
-    } */
-
     .gallery {
         display: grid;
         grid-template-columns: 1fr;
@@ -495,4 +481,166 @@ footer img {
     .carousel-image {
         height: 300px;
     }
+}
+
+/* Latest Paper and In the news CSS start */
+ /* General column styling */
+ .V5AUxf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.wixui-column-strip__column {
+    width: 48%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+h2.font_2 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.375em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph text */
+p.font_7 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.67em;
+    color: #555;
+    margin: 10px 0;
+}
+
+p.font_8 {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.75em;
+    color: #444;
+}
+
+/* Links */
+.wixui-rich-text__text a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wixui-rich-text__text a:hover {
+    text-decoration: underline;
+}
+
+/* Images */
+.wixui-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wixui-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Background layers */
+.MW5IWV {
+    position: relative;
+}
+
+.LWbAav {
+    background-color: #ffffff;
+}
+
+.VgO9Yg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .V5AUxf {
+        flex-direction: column;
+    }
+
+    .wixui-column-strip__column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h2.font_2 {
+        font-size: 24px;
+    }
+
+    p.font_7 {
+        font-size: 18px;
+    }
+
+    p.font_8 {
+        font-size: 16px;
+    }
+
+    .wixui-image {
+        justify-content: center;
+    }
+
+    .wixui-image img {
+        height: auto;
+    }
+}
+
+
+.updates {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.updates h2 {
+    font-size: 28px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.contact-card {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.contact-card li {
+    font-size: 18px;
+    color: #1d1f21;
+    /* Blue text for all content */
+    margin-bottom: 8px;
+}
+
+.contact-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
