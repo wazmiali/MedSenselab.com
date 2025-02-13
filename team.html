@@ -5,8 +5,9 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="lab_img/web_logo.png">
       <link rel="stylesheet" href="Style1.css">
-      <title>Team</title>
+      <title>MedSense Lab</title>
       <style>
             .section {
                   padding: 2rem;
@@ -79,77 +80,91 @@
             }
 
 
-
-
-
-
-
-
-
             /* Media Queries for Mobile Devices */
-        @media (max-width: 768px) {
-            .profile {
-                flex-direction: column; /* Stack image and content vertically */
-                align-items: center; /* Center-align items */
-                gap: 16px; /* Reduce gap between items */
+            @media (max-width: 768px) {
+                  .profile {
+                        flex-direction: column;
+                        /* Stack image and content vertically */
+                        align-items: center;
+                        /* Center-align items */
+                        gap: 16px;
+                        /* Reduce gap between items */
+                  }
+
+                  .profile img {
+                        width: 90%;
+                        /* Set image width to 90% of the container */
+                        height: auto;
+                        /* Maintain aspect ratio */
+                  }
+
+                  .profile-content {
+                        text-align: center;
+                        /* Center-align text */
+                  }
+
+                  .buttons {
+                        display: flex;
+                        justify-content: center;
+                        /* Center-align buttons */
+                        flex-wrap: wrap;
+                        /* Allow buttons to wrap to the next line */
+                  }
+
+                  .buttons button {
+                        margin: 0.25rem;
+                        /* Reduce margin between buttons */
+                  }
+
+                  .para p {
+                        font-size: 1rem;
+                        /* Reduce font size for better readability */
+                  }
+
+                  .section {
+                        padding: 1rem;
+                        /* Reduce padding for smaller screens */
+                  }
+
+                  .section h2 {
+                        font-size: 1.5rem;
+                        /* Reduce heading size */
+                  }
             }
 
-            .profile img {
-                width: 90%; /* Set image width to 90% of the container */
-                height: auto; /* Maintain aspect ratio */
-            }
+            /* Media Query for Very Small Screens (e.g., 327px) */
+            @media (max-width: 327px) {
+                  footer {
+                        padding: 0.5rem;
+                        /* Reduce padding for very small screens */
+                  }
 
-            .profile-content {
-                text-align: center; /* Center-align text */
-            }
+                  footer a {
+                        margin: 0 0.25rem;
+                        /* Reduce margin between icons */
+                        font-size: 0.8rem;
+                        /* Reduce icon size */
+                  }
 
-            .buttons {
-                display: flex;
-                justify-content: center; /* Center-align buttons */
-                flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+                  footer p {
+                        font-size: 0.8rem;
+                        /* Reduce text size */
+                  }
             }
-
-            .buttons button {
-                margin: 0.25rem; /* Reduce margin between buttons */
-            }
-
-            .para p {
-                font-size: 1rem; /* Reduce font size for better readability */
-            }
-
-            .section {
-                padding: 1rem; /* Reduce padding for smaller screens */
-            }
-
-            .section h2 {
-                font-size: 1.5rem; /* Reduce heading size */
-            }
-        }
-
-        /* Media Query for Very Small Screens (e.g., 327px) */
-        @media (max-width: 327px) {
-            footer {
-                padding: 0.5rem; /* Reduce padding for very small screens */
-            }
-
-            footer a {
-                margin: 0 0.25rem; /* Reduce margin between icons */
-                font-size: 0.8rem; /* Reduce icon size */
-            }
-
-            footer p {
-                font-size: 0.8rem; /* Reduce text size */
-            }
-        }
-            
       </style>
 </head>
 
 <body>
-      
+
+      <div class="header">
+            <img src="lab_img/lab_logo.png" alt="Medsense Lab" class="logo left-logo">
+            <h3 class="center1-text">BSBE <br> IIT Jammu</h3>
+            <img src="lab_img/iit.png" alt="IIT Logo" class="logo right-logo">
+      </div>
+
       <section>
             <div class="navbar">
-                  <div class="logo">Prof. Vinay Sharma</div>
+                  <div class="logo">Dr. Vinay Sharma</div>
                   <div class="menu-toggle" onclick="toggleMenu()">
                         <div></div>
                         <div></div>
@@ -178,7 +193,7 @@
                         <a href="contact.html">Contact</a>
                   </div>
             </div>
-      
+
             <script>
                   function toggleMenu() {
                         document.querySelector(".nav-links").classList.toggle("active");
