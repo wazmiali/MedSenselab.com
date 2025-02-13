@@ -27,7 +27,7 @@ body {
 .left-logo {
     margin-right: auto;
     height: 73px;
-    width: 17%;
+    width: auto;
 }
 
 .right-logo {
