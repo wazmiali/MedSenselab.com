@@ -11,7 +11,60 @@ body {
     box-sizing: border-box;
 }
 
+
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    flex-wrap: nowrap;
+    /* Keep logos in a single line */
+    overflow-x: auto;
+    /* Enable scrolling for very small screens */
+}
+
+.logo {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    width: 17%;
+    max-height: 73px;
+    margin: 0 10px;
+}
+
+.center-logo {
+    width: 20%;
+    /* Increase the size of the middle logo */
+}
+
+/* Medium screens (tablets or small laptops) */
+@media (max-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+
+    .center-logo {
+        width: 23%;
+        /* Slightly larger for tablets */
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .logo {
+        width: 25%;
+    }
+
+    .center-logo {
+        width: 28%;
+        /* Keep middle logo larger for small screens */
+    }
+}
+
+
+/* .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,22 +80,23 @@ body {
 .left-logo {
     margin-right: auto;
     height: 73px;
-    width: auto;
+    width: 17%;
 }
 
 .right-logo {
     margin-right: 10px;
-    width: 19%;
+    width: 17%;
     height: 73px;
 }
 
+
 .center1-text {
-    text-align: right;
+    text-align: center;
     flex-grow: 1;
     margin: 20px;
     color: #000000c9;
     font-family: auto;
-}
+} */
 
 
 
@@ -175,11 +229,16 @@ body {
 
 
 .banner {
-    background: url('Images/lab.') no-repeat center center/cover;
+    background: url('Images/lab.jg') no-repeat center center/cover;
+    /* Fixed extension for the image */
     color: #100707;
     text-align: center;
-/*     padding: 50px 20px; */
-    padding: 25px 20px;
+    padding: 50px 20px;
+    width: 100%;
+    height: auto;
+    /* Allow height to adjust automatically */
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
 }
 
 .banner h1 {
@@ -189,12 +248,46 @@ body {
 
 .banner p {
     font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Medium screens (tablets or small laptops) */
+@media (max-width: 768px) {
+    .banner {
+        padding: 30px 15px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+        /* Adjust heading size */
+    }
+
+    .banner p {
+        font-size: 1rem;
+        /* Adjust paragraph size */
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .banner {
+        padding: 20px 10px;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+        /* Smaller heading size for phones */
+    }
+
+    .banner p {
+        font-size: 0.9rem;
+    }
 }
 
 
-
- /* Container for the slider */
- .image-slider {
+/* Container for the slider */
+.image-slider {
     width: 100%;
     max-width: 1200px;
     overflow: hidden;
@@ -258,7 +351,6 @@ body {
 }
 
 
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -278,7 +370,8 @@ body {
 
 .updates ul {
     list-style-type: none;
-    padding: 10px;
+    padding: 10px 62px 10px;
+    font-family: auto;
 }
 
 .updates ul li {
@@ -555,8 +648,8 @@ footer img {
 }
 
 /* Latest Paper and In the news CSS start */
- /* General column styling */
- .V5AUxf {
+/* General column styling */
+.V5AUxf {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -687,10 +780,11 @@ p.font_8 {
 }
 
 .updates h2 {
-    font-size: 28px;
-    color: #000;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 10px;
+    padding: 0px 56px 0px;
+    color: rgb(14, 14, 44);
 }
 
 .contact-card {
@@ -715,4 +809,3 @@ p.font_8 {
 .contact-card a:hover {
     text-decoration: underline;
 }
-
