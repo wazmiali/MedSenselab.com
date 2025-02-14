@@ -1,64 +1,135 @@
-body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
+/* Section Styling */
+.research-section {
+      padding: 50px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      margin: auto;
 }
 
-header {
-      background-color: #ffffff;
-      text-align: left;
-      padding: 20px 40px;
-      border-bottom: 2px solid #ddd;
+/* Section Heading */
+.section-heading {
+      text-align: center;
+      margin-bottom: 40px;
 }
 
-header h1 {
-      font-size: 36px;
-      margin: 0;
-      font-weight: bold;
-}
-
-.section {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 40px;
-      border-bottom: 2px solid #ddd;
-}
-
-.section img {
-      flex: 0 0 30%;
-      max-width: 30%;
-      height: auto;
-      margin-right: 40px;
-      border-radius: 8px;
-}
-
-.section-content {
-      flex: 1;
-      min-width: 300px;
-}
-
-.section-content h2 {
-      font-size: 28px;
+.section-heading h1 {
+      font-size: 2.5rem;
       color: #222;
-      margin-top: 0;
 }
 
-.section-content p {
-      font-size: 16px;
-      line-height: 1.8;
-      margin: 10px 0;
-}
-
-.section-content a {
-      display: inline-block;
-      font-size: 16px;
-      color: #007BFF;
-      text-decoration: none;
+.section-heading p {
+      font-size: 1.2rem;
+      color: #555;
       margin-top: 10px;
-      border-bottom: 1px solid transparent;
 }
 
-.section-content a:hover {
-      border-bottom: 1px solid #007BFF;
+/* Research Grid */
+.research-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+}
+
+/* Research Item */
+.research-item {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+}
+
+.research-item:hover {
+      transform: translateY(-10px);
+}
+
+.research-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+}
+
+.research-item h2 {
+      font-size: 1.8rem;
+      padding: 20px;
+      background-color: #0077b6;
+      color: #fff;
+}
+
+.research-item p {
+      padding: 20px;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+      .research-grid {
+            grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+@media (min-width: 900px) {
+      .research-grid {
+            grid-template-columns: repeat(3, 1fr);
+      }
+
+      .section-heading h1 {
+            font-size: 3rem;
+      }
+
+      .section-heading p {
+            font-size: 1.5rem;
+      }
+
+      .research-item h2 {
+            font-size: 2rem;
+      }
+
+      .research-item p {
+            font-size: 1.1rem;
+      }
+}
+
+
+
+/* Updated image styling for larger display */
+.research-item img {
+      width: 100%;
+      height: 300px;
+      /* Sets a uniform height for all images */
+      object-fit: cover;
+      /* Ensures the image is cropped proportionally to fill the area */
+      display: block;
+      border-bottom: 4px solid #0077b6;
+      /* Adds a border for a more defined look */
+}
+
+@media (min-width: 900px) {
+      .research-item img {
+            height: 400px;
+            /* Increase image height for larger screens */
+      }
+}
+
+
+/* Updated grid layout for two images per row */
+.research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* Ensures two items per row */
+      gap: 40px;
+      /* Adds space between the items */
+}
+
+/* For smaller screens, revert to a single-column layout */
+@media (max-width: 768px) {
+      .research-grid {
+            grid-template-columns: 1fr;
+            /* Single column for mobile screens */
+      }
 }
