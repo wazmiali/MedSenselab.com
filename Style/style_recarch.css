@@ -199,3 +199,81 @@
             padding: 10px;
       }
 }
+
+
+
+
+
+
+ /* Container for the merged research items */
+ .merged-research-item {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+}
+
+/* Shared heading */
+.merged-research-item h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+}
+
+/* Wrapper for the research items */
+.content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* gap: 20px; */
+}
+
+/* Individual research items */
+.research-item {
+      flex: 1 1 calc(50% - 20px);
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+}
+
+.research-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+}
+
+.research-item p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+      .content-wrapper {
+            flex-direction: column;
+      }
+
+      .research-item {
+            flex: 1 1 100%;
+      }
+
+      .merged-research-item h2 {
+            font-size: 1.5rem;
+      }
+}
+
+@media (max-width: 480px) {
+      .merged-research-item h2 {
+            font-size: 1.2rem;
+      }
+
+      .research-item p {
+            font-size: 0.9rem;
+      }
+}
