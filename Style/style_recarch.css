@@ -133,3 +133,69 @@
             /* Single column for mobile screens */
       }
 }
+
+
+
+
+/* General section styling */
+#comp-l6v0rowo1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Distributes images evenly */
+      align-items: center;
+      padding: 20px;
+}
+
+#comp-l6v0rowo1 h2 {
+      font-size: 2rem;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+}
+
+/* Image container styling */
+#comp-l6v0rowo1 .MazNVa {
+      flex: 1 1 auto;
+      max-width: 20%;
+      /* Makes sure the images are a uniform width */
+      padding: 0 10px;
+      box-sizing: border-box;
+}
+
+/* Image styling for full responsiveness */
+#comp-l6v0rowo1 .MazNVa img {
+      width: 100%;
+      /* Makes the images fill their container */
+      height: auto;
+      /* Keeps the aspect ratio */
+      display: block;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+      #comp-l6v0rowo1 {
+            flex-wrap: wrap;
+            /* Stacks images if there's no space */
+            justify-content: center;
+      }
+
+      #comp-l6v0rowo1 .MazNVa {
+            max-width: 45%;
+            /* Show 2 images per row on tablets */
+      }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+      #comp-l6v0rowo1 .MazNVa {
+            max-width: 100%;
+            /* Stacks images vertically for small screens */
+            padding: 5px 0;
+      }
+
+      #comp-l6v0rowo1 h2 {
+            font-size: 1.2rem;
+            padding: 10px;
+      }
+}
