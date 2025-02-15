@@ -25,17 +25,17 @@ setInterval(() => {
 
 
 // Show the button when user scrolls down
-// window.onscroll = function () {
-//       let scrollBtn = document.getElementById("scrollUp");
-//       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-//           scrollBtn.style.display = "block";
-//       } else {
-//           scrollBtn.style.display = "none";
-//       }
-//   };
+window.onscroll = function () {
+      let scrollBtn = document.getElementById("scrollUp");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          scrollBtn.style.display = "block";
+      } else {
+          scrollBtn.style.display = "none";
+      }
+  };
   
-//   // Scroll to top when button is clicked
-//   document.getElementById("scrollUp").addEventListener("click", function () {
-//       window.scrollTo({ top: 0, behavior: "smooth" });
-//   });
+  // Scroll to top when button is clicked
+  document.getElementById("scrollUp").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
