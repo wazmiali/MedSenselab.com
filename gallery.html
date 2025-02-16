@@ -70,6 +70,68 @@
                         font-size: 0.9rem;
                   }
             }
+
+
+            /* Gallery */
+               /* Modal styles */
+      .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+      }
+
+      .modal-content {
+            max-width: 90%;
+            max-height: 80vh;
+            margin: auto;
+            margin-top: 10vh;
+            border-radius: 10px;
+      }
+
+      .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+      }
+
+      .prev,
+      .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            user-select: none;
+            border-radius: 0 5px 5px 0;
+            transition: 0.3s;
+      }
+
+      .prev {
+            left: 10px;
+      }
+
+      .next {
+            right: 10px;
+      }
+
+      .prev:hover,
+      .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+      }
       </style>
 
 </head>
@@ -156,6 +218,15 @@
 
             </div>
       </section>
+
+
+      <div id="image-modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+      </div>
+
 
       <footer>
             <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
