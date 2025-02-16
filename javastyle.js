@@ -39,3 +39,37 @@ window.onscroll = function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+
+//Gallery
+
+      // JavaScript to handle the gallery image clicks and modal
+      let currentImageIndex = 0;
+      const images = document.querySelectorAll('.gallery-item img');
+
+      // Function to open modal with the clicked image
+      images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                  currentImageIndex = index;
+                  openModal(img.src);
+            });
+      });
+
+      function openModal(src) {
+            document.getElementById('image-modal').style.display = 'block';
+            document.getElementById('modal-img').src = src;
+      }
+
+      function closeModal() {
+            document.getElementById('image-modal').style.display = 'none';
+      }
+
+      // Function to navigate to the next or previous image
+      function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                  currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                  currentImageIndex = 0;
+            }
+            document.getElementById('modal-img').src = images[currentImageIndex].src;
+      }
