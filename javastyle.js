@@ -1,75 +1,107 @@
-// This containt is use to Image slider for a three images in a site.  (Start)
+// This content is used for an image slider with three images on a site. (Start)
 let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-image');
+const slides = document.querySelectorAll(".carousel-image");
 
 function showSlide(index) {
-      if (index < 0) {
-            index = slides.length - 1;
-      } else if (index >= slides.length) {
-            index = 0;
-      }
-      currentIndex = index;
-      const offset = -currentIndex * 100;
-      document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
+  if (index < 0) {
+    index = slides.length - 1;
+  } else if (index >= slides.length) {
+    index = 0;
+  }
+  currentIndex = index;
+  const offset = -currentIndex * 100;
+  document.querySelector(
+    ".carousel-slide"
+  ).style.transform = `translateX(${offset}%)`;
 }
 
 function changeSlide(direction) {
-      currentIndex += direction;
-      showSlide(currentIndex);
+  currentIndex += direction;
+  showSlide(currentIndex);
 }
 setInterval(() => {
-      changeSlide(1);
+  changeSlide(1);
 }, 3000);
-
 // (Stop)
 
-
-// Show the button when user scrolls down
+// Show the button when the user scrolls down
 window.onscroll = function () {
-      let scrollBtn = document.getElementById("scrollUp");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-          scrollBtn.style.display = "block";
-      } else {
-          scrollBtn.style.display = "none";
-      }
-  };
-  
-  // Scroll to top when button is clicked
-  document.getElementById("scrollUp").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  let scrollBtn = document.getElementById("scrollUp");
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("scrollUp").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Gallery
+
+// JavaScript to handle the gallery image clicks and modal
+let currentImageIndex = 0;
+const galleryImages = document.querySelectorAll(".gallery-item img");
+
+// Function to open modal with the clicked image
+galleryImages.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentImageIndex = index;
+    openModal(img.src);
   });
+});
 
+function openModal(src) {
+  document.getElementById("image-modal").style.display = "block";
+  document.getElementById("modal-img").src = src;
+}
 
-//Gallery
+function closeModal() {
+  document.getElementById("image-modal").style.display = "none";
+}
 
-      // JavaScript to handle the gallery image clicks and modal
-      let currentImageIndex = 0;
-      const images = document.querySelectorAll('.gallery-item img');
+// Function to navigate to the next or previous image
+function changeImage(direction) {
+  currentImageIndex += direction;
+  if (currentImageIndex < 0) {
+    currentImageIndex = galleryImages.length - 1;
+  } else if (currentImageIndex >= galleryImages.length) {
+    currentImageIndex = 0;
+  }
+  document.getElementById("modal-img").src = galleryImages[currentImageIndex].src;
+}
 
-      // Function to open modal with the clicked image
-      images.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                  currentImageIndex = index;
-                  openModal(img.src);
-            });
-      });
+// Slider animation handling
+// Get the slider track element
+const sliderTrack = document.querySelector(".slider-track");
 
-      function openModal(src) {
-            document.getElementById('image-modal').style.display = 'block';
-            document.getElementById('modal-img').src = src;
-      }
+// Variable to store animation state
+let isPaused = false;
 
-      function closeModal() {
-            document.getElementById('image-modal').style.display = 'none';
-      }
+// Function to pause the animation
+function pauseAnimation() {
+  if (!isPaused) {
+    sliderTrack.style.animationPlayState = "paused";
+    isPaused = true;
+  }
+}
 
-      // Function to navigate to the next or previous image
-      function changeImage(direction) {
-            currentImageIndex += direction;
-            if (currentImageIndex < 0) {
-                  currentImageIndex = images.length - 1;
-            } else if (currentImageIndex >= images.length) {
-                  currentImageIndex = 0;
-            }
-            document.getElementById('modal-img').src = images[currentImageIndex].src;
-      }
+// Function to resume the animation
+function resumeAnimation() {
+  if (isPaused) {
+    sliderTrack.style.animationPlayState = "running";
+    isPaused = false;
+  }
+}
+
+// Add event listeners to each image
+const sliderImages = document.querySelectorAll(".slider-track img");
+sliderImages.forEach((img) => {
+  img.addEventListener("click", pauseAnimation);
+  img.addEventListener("mouseleave", resumeAnimation);
+});
