@@ -10,7 +10,10 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
+.cent {
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
 .header {
     display: flex;
