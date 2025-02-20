@@ -10,6 +10,17 @@
       <title>MedSense Lab</title>
 
       <style>
+            html,
+            body {
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+            }
+
+            .CONTAINER5 {
+                  flex: 1;
+            }
+
             .section {
                   margin: 20px auto;
                   max-width: 900px;
@@ -79,165 +90,173 @@
 </head>
 
 <body>
-      <div class="header">
-            <img src="lab_img/lab_logo.png" alt="Medsense Lab" class="logo left-logo">
-            <img src="lab_img/loder.png" alt="Medsense Lab" class="logo center-logo">
-            <img src="lab_img/iit.png" alt="IIT Logo" class="logo right-logo">
+      <div class="CONTAINER5">
+
+            <div class="header">
+                  <img src="lab_img/lab_logo.png" alt="Medsense Lab" class="logo left-logo">
+                  <img src="lab_img/loder.png" alt="Medsense Lab" class="logo center-logo">
+                  <img src="lab_img/iit.png" alt="IIT Logo" class="logo right-logo">
+            </div>
+
+            <div class="navbar">
+                  <div class="logo">Dr. Vinay Sharma</div>
+                  <div class="menu-toggle" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                  </div>
+                  <div class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="research.html">Research Area</a>
+                        <div class="dropdown">
+                              <a href="#" class="dropbtn">Team <span class="arrow">&#9662;</span></a>
+                              <div class="dropdown-content">
+                                    <a href="Group_leader.html">Team Leader</a>
+                                    <a href="team.html">Lab Members</a>
+                              </div>
+                        </div>
+                        <a href="journey.html">News</a>
+                        <div class="dropdown">
+                              <a href="#" class="dropbtn">Publications <span class="arrow">&#9662;</span></a>
+                              <div class="dropdown-content">
+                                    <a href="publication.html">Journal</a>
+                                    <a href="publication.html">Book Chapter</a>
+                              </div>
+                        </div>
+                        <a href="equipment.html">Equipment</a>
+                        <a href="opening.html">Openings</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                  </div>
+            </div>
+
+            <script>
+                  function toggleMenu() {
+                        document.querySelector(".nav-links").classList.toggle("active");
+                  }
+            </script>
+
+            <section>
+                  <div class="section" id="equipment">
+                        <h2>Lab Equipment</h2>
+                        <div class="equipment-grid">
+                              <div class="equipment-item">
+                                    <img src="Image/eq1.jpg" alt=" Haier 346L Bottom Mounted Refrigerator.">
+                                    <h3> Haier 346L Bottom Mounted Refrigerator.</h3>
+                                    <p>It's a household appliance used for storing food at low temperatures to prevent
+                                          spoilage.</p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq2.jpg"
+                                          alt="Thermo Scientific 1300 Series A2 Biological Safety Cabinet.">
+                                    <h3>Thermo Scientific 1300 Series A2 Biological Safety Cabinet.</h3>
+                                    <p>It's designed to protect lab workers and the environment from biohazards during
+                                          experimental procedures.</p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq3.jpg" alt="Thermo Scientific Sorvall ST 8 Centrifuge.">
+                                    <h3>Thermo Scientific Sorvall ST 8 Centrifuge.</h3>
+                                    <p>It's used to separate substances of different densities using centrifugal force
+                                          in
+                                          laboratory settings.</p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq4.jpg" alt="Thermo Scientific Forma Steri-Cycle CO2 Incubator.">
+                                    <h3>Thermo Scientific Forma Steri-Cycle CO2 Incubator.</h3>
+                                    <p>It's used to maintain a controlled environment with stable temperature, humidity,
+                                          and
+                                          CO2 levels for cell and tissue culture.</p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq5.jpg" alt="MAC Vertical Autoclave (Pro Series)">
+                                    <h3>MAC Vertical Autoclave (Pro Series)</h3>
+                                    <p>It's used for sterilizing equipment and solutions using high pressure and steam.
+                                    </p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq6.jpg"
+                                          alt=" Thermo Scientific 1500 Series Biological Safety Cabinet.">
+                                    <h3> Thermo Scientific 1500 Series Biological Safety Cabinet.</h3>
+                                    <p>Used for drying and sterilizing samples under controlled conditions.</p>
+                              </div>
+                              <div class="equipment-item">
+                                    <img src="Image/eq7.jpg" alt="Remi CIS-18 Plus Bench Top Orbital Shaking Incubator">
+                                    <h3>Remi CIS-18 Plus Bench Top Orbital Shaking Incubator</h3>
+                                    <p>Specialized for creating molds and custom parts for dental and biomedical
+                                          applications.
+                                    </p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/1.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/2.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p> .</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/3.jpg" alt="Centrifuge">
+                                    <h3> .</h3>
+                                    <p> .</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/4.jpg" alt="Centrifuge">
+                                    <h3> .</h3>
+                                    <p> .</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/5.jpg" alt="Centrifuge">
+                                    <h3> .</h3>
+                                    <p> .</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/6.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/machine.jpg" alt="Centrifuge">
+                                    <h3>..</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/8.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/9.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/10.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                              <div class="equipment-item">
+                                    <img src="Image_equipment/biotek.jpg" alt="Centrifuge">
+                                    <h3>.</h3>
+                                    <p>.</p>
+                              </div>
+
+                        </div>
+                  </div>
+            </section>
       </div>
-
-      <div class="navbar">
-            <div class="logo">Dr. Vinay Sharma</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-            </div>
-            <div class="nav-links">
-                  <a href="index.html">Home</a>
-                  <a href="research.html">Research Area</a>
-                  <div class="dropdown">
-                         <a href="#" class="dropbtn">Team <span class="arrow">&#9662;</span></a>
-                        <div class="dropdown-content">
-                              <a href="Group_leader.html">Team Leader</a>
-                              <a href="team.html">Lab Members</a>
-                        </div>
-                  </div>
-                  <a href="journey.html">News</a>
-                  <div class="dropdown">
-                       <a href="#" class="dropbtn">Publications <span class="arrow">&#9662;</span></a>
-                        <div class="dropdown-content">
-                              <a href="publication.html">Journal</a>
-                              <a href="publication.html">Book Chapter</a>
-                        </div>
-                  </div>
-                  <a href="equipment.html">Equipment</a>
-                  <a href="opening.html">Openings</a>
-                  <a href="gallery.html">Gallery</a>
-                  <a href="contact.html">Contact</a>
-            </div>
-      </div>
-
-      <script>
-            function toggleMenu() {
-                  document.querySelector(".nav-links").classList.toggle("active");
-            }
-      </script>
-
-      <section>
-            <div class="section" id="equipment">
-                  <h2>Lab Equipment</h2>
-                  <div class="equipment-grid">
-                        <div class="equipment-item">
-                              <img src="Image/eq1.jpg" alt=" Haier 346L Bottom Mounted Refrigerator.">
-                              <h3> Haier 346L Bottom Mounted Refrigerator.</h3>
-                              <p>It's a household appliance used for storing food at low temperatures to prevent
-                                    spoilage.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq2.jpg"
-                                    alt="Thermo Scientific 1300 Series A2 Biological Safety Cabinet.">
-                              <h3>Thermo Scientific 1300 Series A2 Biological Safety Cabinet.</h3>
-                              <p>It's designed to protect lab workers and the environment from biohazards during
-                                    experimental procedures.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq3.jpg" alt="Thermo Scientific Sorvall ST 8 Centrifuge.">
-                              <h3>Thermo Scientific Sorvall ST 8 Centrifuge.</h3>
-                              <p>It's used to separate substances of different densities using centrifugal force in
-                                    laboratory settings.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq4.jpg" alt="Thermo Scientific Forma Steri-Cycle CO2 Incubator.">
-                              <h3>Thermo Scientific Forma Steri-Cycle CO2 Incubator.</h3>
-                              <p>It's used to maintain a controlled environment with stable temperature, humidity, and
-                                    CO2 levels for cell and tissue culture.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq5.jpg" alt="MAC Vertical Autoclave (Pro Series)">
-                              <h3>MAC Vertical Autoclave (Pro Series)</h3>
-                              <p>It's used for sterilizing equipment and solutions using high pressure and steam.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq6.jpg" alt=" Thermo Scientific 1500 Series Biological Safety Cabinet.">
-                              <h3> Thermo Scientific 1500 Series Biological Safety Cabinet.</h3>
-                              <p>Used for drying and sterilizing samples under controlled conditions.</p>
-                        </div>
-                        <div class="equipment-item">
-                              <img src="Image/eq7.jpg" alt="Remi CIS-18 Plus Bench Top Orbital Shaking Incubator">
-                              <h3>Remi CIS-18 Plus Bench Top Orbital Shaking Incubator</h3>
-                              <p>Specialized for creating molds and custom parts for dental and biomedical applications.
-                              </p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/1.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/2.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p> .</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/3.jpg" alt="Centrifuge">
-                              <h3> .</h3>
-                              <p> .</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/4.jpg" alt="Centrifuge">
-                              <h3> .</h3>
-                              <p> .</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/5.jpg" alt="Centrifuge">
-                              <h3> .</h3>
-                              <p> .</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/6.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/machine.jpg" alt="Centrifuge">
-                              <h3>..</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/8.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/9.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/10.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                        <div class="equipment-item">
-                              <img src="Image_equipment/biotek.jpg" alt="Centrifuge">
-                              <h3>.</h3>
-                              <p>.</p>
-                        </div>
-
-                  </div>
-            </div>
-      </section>
 
       <footer>
             <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
@@ -249,7 +268,7 @@
                                           alt="Google Scholar" width="18" height="18">
                               </a>
 
-                              <p>&copy; 2025 All rights reserved.</p>
+                              <p>&copy; 2025 MedSense Lab.</p>
       </footer>
 
       <div id="scrollUp">
