@@ -9,6 +9,17 @@
       <link rel="stylesheet" href="Style1.css">
       <title>MedSense Lab</title>
       <style>
+            html,
+            body {
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+            }
+
+            .CONTAINER5 {
+                  flex: 1;
+            }
+
             .container {
                   width: 90%;
                   max-width: 1200px;
@@ -128,164 +139,168 @@
 
 <body>
 
-      <div class="header">
-            <img src="lab_img/lab_logo.png" alt="Medsense Lab" class="logo left-logo">
-            <img src="lab_img/loder.png" alt="Medsense Lab" class="logo center-logo">
-            <img src="lab_img/iit.png" alt="IIT Logo" class="logo right-logo">
-        </div>
+      <div class="CONTAINER5">
 
-      <div class="navbar">
-            <div class="logo">Dr. Vinay Sharma</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                  <div></div>
-                  <div></div>
-                  <div></div>
+            <div class="header">
+                  <img src="lab_img/lab_logo.png" alt="Medsense Lab" class="logo left-logo">
+                  <img src="lab_img/loder.png" alt="Medsense Lab" class="logo center-logo">
+                  <img src="lab_img/iit.png" alt="IIT Logo" class="logo right-logo">
             </div>
-            <div class="nav-links">
-                  <a href="index.html">Home</a>
-                  <a href="research.html">Research Area</a>
-                  <div class="dropdown">
-                        <a href="#" class="dropbtn">Team <span class="arrow">&#9662;</span></a>
-                        <div class="dropdown-content">
-                              <a href="Group_leader.html">Team Leader</a>
-                              <a href="team.html">Lab Members</a>
+
+            <div class="navbar">
+                  <div class="logo">Dr. Vinay Sharma</div>
+                  <div class="menu-toggle" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                  </div>
+                  <div class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="research.html">Research Area</a>
+                        <div class="dropdown">
+                              <a href="#" class="dropbtn">Team <span class="arrow">&#9662;</span></a>
+                              <div class="dropdown-content">
+                                    <a href="Group_leader.html">Team Leader</a>
+                                    <a href="team.html">Lab Members</a>
+                              </div>
+                        </div>
+                        <a href="journey.html">News</a>
+                        <div class="dropdown">
+                              <a href="#" class="dropbtn">Publications <span class="arrow">&#9662;</span></a>
+                              <div class="dropdown-content">
+                                    <a href="publication.html">Journal</a>
+                                    <a href="publication.html">Book Chapter</a>
+                              </div>
+                        </div>
+                        <a href="equipment.html">Equipment</a>
+                        <a href="opening.html">Openings</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                  </div>
+            </div>
+
+            <script>
+                  function toggleMenu() {
+                        document.querySelector(".nav-links").classList.toggle("active");
+                  }
+            </script>
+
+            <div class="container">
+                  <div class="content-part">
+                        <!-- Image -->
+                        <div class="img-part">
+                              <img src="Image_team/Sir_background.png" alt="Dr. Vinay Sharma">
+                        </div>
+
+                        <!-- Text -->
+                        <div class="text">
+                              <p>
+                              <h2>Dr. Vinay Sharma</h2>
+                              <strong>Assistant Professor</strong></p>
+                              <p>Academic Interests
+                                    Bio-active nanomaterials, Biose</p>
+                              <p>Email: vinay.sharma@iitjammu.ac.in</p>
+
+
+                              <div class="btn-part">
+                                    <a class="readon yellow-btn" href="#">Google Scholar</a>
+                              </div>
                         </div>
                   </div>
-                  <a href="journey.html">News</a>
-                  <div class="dropdown">
-                        <a href="#" class="dropbtn">Publications <span class="arrow">&#9662;</span></a>
-                        <div class="dropdown-content">
-                              <a href="publication.html">Journal</a>
-                              <a href="publication.html">Book Chapter</a>
-                        </div>
-                  </div>
-                  <a href="equipment.html">Equipment</a>
-                  <a href="opening.html">Openings</a>
-                  <a href="gallery.html">Gallery</a>
-                  <a href="contact.html">Contact</a>
+
+                  <section>
+                        <h2>Education</h2>
+                        <ul>
+                              <li>2014-01 - 2019-01 Ph.D.: Indian Institute of Technology Indore <br>
+
+                                    Thesis: Multifunctional Nanomaterials for Biosensing and Bioimaging: Insights from
+                                    Metal
+                                    Oxides and Carbon-dots.</li>
+
+                              <li>2010-07 - 2012-07 Master of Technology. Centre For Converging Technologies,
+                                    <br>University
+                                    of
+                                    Rajasthan - Jaipur, India</li>
+                              <li>Thesis: Evaluation of Hepatotoxicity and Oxidative Stress Induced by Multiwalled
+                                    Carbon
+                                    Nanotubes in Swiss Albino Mice</li>
+                              <li>2006-07 - 2010-06 Bachelor of Technology. <br>
+                                    University of Rajasthan - Jaipur, India</li>
+                        </ul>
+                  </section>
+
+                  <section>
+                        <h2>Research Experience</h2>
+                        <ul>
+                              <li>2019-01 to 2021-01 Postdoctoral Research Funded by Human Frontier Science Program</li>
+
+                              <li>University of California Riverside, California, United States <br>Developed single
+                                    cell
+                                    discrimination technology and single-molecule recapture method using solid-state
+                                    nanopore
+                                    technology.</li>
+
+                              <li>2018-11 to 2019-01 Research Associate <br>
+
+                                    Indian Institute of Technology Indore, Simrol, Madhya Pradesh, India <br>
+
+                                    Developed biosensors for the environment and bioimaging probes for cancer cells.
+                              </li>
+
+
+                        </ul>
+                  </section>
+
+                  <section>
+                        <h2>Awards and Honors</h2>
+                        <ul>
+                              <li>2024: Member, Royal Society of Chemistry (MRSC)</li>
+                              <li> 2022: Young Associate: Indian Academy of Sciences, 2022-2025</li>
+                              <li> 2020: Ramanujan Fellowship</li>
+                              <li> 2016: CEFIPRA-ESONN fellowship by CEFIPRA, DST, Govt. of India.</li>
+                        </ul>
+                  </section>
+
+                  <section>
+                        <h2>Teaching</h2>
+                        <ul>
+                              <li>Courses:</li>
+                              <li>UG Level: Biology for Engineers, Bioanalytical Methods, Nanobiotechnology.</li>
+                              <li>PG Level: Biosensors, Biomedical nanostructures, Biomaterials and Tissue Engineering
+                              </li>
+
+                        </ul>
+                  </section>
+
+                  <section>
+                        <h2>Administrative Responsibilities</h2>
+                        <ul>
+                              <li>Ongoing:</li>
+                              <li>Associate Dean: Alumni and Corporate Relations (2024 onwards)</li>
+                              <li>Professor In-Charge: MoUs (2024 Onwards)</li>
+                              <li>Chairperson, Department Post-Graduation Committee (DPGC) ( 2022 onwards)</li>
+                              <li>Completed Tenures:</li>
+                              <li>Associate Dean: International Relations and MoUs (2023-2024)</li>
+
+                        </ul>
+                  </section>
+
+                  <section>
+                        <h2>Research Projects</h2>
+                        <ul>
+                              <li>Funded Projects:</li>
+                              <li>Start-up Research Grant: Department of Science and Technology (DST)-Science and
+                                    Engineering
+                                    Research Board (SERB) Government of India. Project Theme: Development of
+                                    Nano-theranostics. Status: Running</li>
+                              <li>Institute Seed Grant: Project Theme: Development of Diagnostic Platforms using
+                                    Nanomaterials. Status: Running</li>
+                              <li>Other External Funded Grants: Project Theme: Antiviral and Antibacterial Products</li>
+
+                        </ul>
+                  </section>
             </div>
       </div>
-
-      <script>
-            function toggleMenu() {
-                  document.querySelector(".nav-links").classList.toggle("active");
-            }
-      </script>
-
-      <div class="container">
-            <div class="content-part">
-                  <!-- Image -->
-                  <div class="img-part">
-                        <img src="Image_team/Sir.jpeg" alt="Dr. Vinay Sharma">
-                  </div>
-
-                  <!-- Text -->
-                  <div class="text">
-                        <p>
-                        <h2>Dr. Vinay Sharma</h2>
-                        <strong>Assistant Professor</strong></p>
-                        <p>Academic Interests
-                              Bio-active nanomaterials, Biose</p>
-                        <p>Email: vinay.sharma@iitjammu.ac.in</p>
-
-
-                        <div class="btn-part">
-                              <a class="readon yellow-btn" href="#">Google Scholar</a>
-                        </div>
-                  </div>
-            </div>
-
-            <section>
-                  <h2>Education</h2>
-                  <ul>
-                        <li>2014-01 - 2019-01 Ph.D.: Indian Institute of Technology Indore <br>
-
-                              Thesis: Multifunctional Nanomaterials for Biosensing and Bioimaging: Insights from Metal
-                              Oxides and Carbon-dots.</li>
-
-                        <li>2010-07 - 2012-07 Master of Technology. Centre For Converging Technologies, <br>University
-                              of
-                              Rajasthan - Jaipur, India</li>
-                        <li>Thesis: Evaluation of Hepatotoxicity and Oxidative Stress Induced by Multiwalled Carbon
-                              Nanotubes in Swiss Albino Mice</li>
-                        <li>2006-07 - 2010-06 Bachelor of Technology. <br>
-                              University of Rajasthan - Jaipur, India</li>
-                  </ul>
-            </section>
-
-            <section>
-                  <h2>Research Experience</h2>
-                  <ul>
-                        <li>2019-01 to 2021-01 Postdoctoral Research Funded by Human Frontier Science Program</li>
-
-                        <li>University of California Riverside, California, United States <br>Developed single cell
-                              discrimination technology and single-molecule recapture method using solid-state nanopore
-                              technology.</li>
-
-                        <li>2018-11 to 2019-01 Research Associate <br>
-
-                              Indian Institute of Technology Indore, Simrol, Madhya Pradesh, India <br>
-
-                              Developed biosensors for the environment and bioimaging probes for cancer cells.
-                        </li>
-
-
-                  </ul>
-            </section>
-
-            <section>
-                  <h2>Awards and Honors</h2>
-                  <ul>
-                        <li>2024: Member, Royal Society of Chemistry (MRSC)</li>
-                        <li> 2022: Young Associate: Indian Academy of Sciences, 2022-2025</li>
-                        <li> 2020: Ramanujan Fellowship</li>
-                        <li> 2016: CEFIPRA-ESONN fellowship by CEFIPRA, DST, Govt. of India.</li>
-                  </ul>
-            </section>
-
-            <section>
-                  <h2>Teaching</h2>
-                  <ul>
-                        <li>Courses:</li>
-                        <li>UG Level: Biology for Engineers, Bioanalytical Methods, Nanobiotechnology.</li>
-                        <li>PG Level: Biosensors, Biomedical nanostructures, Biomaterials and Tissue Engineering</li>
-
-                  </ul>
-            </section>
-
-            <section>
-                  <h2>Administrative Responsibilities</h2>
-                  <ul>
-                        <li>Ongoing:</li>
-                        <li>Associate Dean: Alumni and Corporate Relations (2024 onwards)</li>
-                        <li>Professor In-Charge: MoUs (2024 Onwards)</li>
-                        <li>Chairperson, Department Post-Graduation Committee (DPGC) ( 2022 onwards)</li>
-                        <li>Completed Tenures:</li>
-                        <li>Associate Dean: International Relations and MoUs (2023-2024)</li>
-
-                  </ul>
-            </section>
-
-            <section>
-                  <h2>Research Projects</h2>
-                  <ul>
-                        <li>Funded Projects:</li>
-                        <li>Start-up Research Grant: Department of Science and Technology (DST)-Science and
-                              Engineering
-                              Research Board (SERB) Government of India. Project Theme: Development of
-                              Nano-theranostics. Status: Running</li>
-                        <li>Institute Seed Grant: Project Theme: Development of Diagnostic Platforms using
-                              Nanomaterials. Status: Running</li>
-                        <li>Other External Funded Grants: Project Theme: Antiviral and Antibacterial Products</li>
-
-                  </ul>
-            </section>
-      </div>
-
-      <!-- <div id="scrollUp">
-            <i class="fa fa-angle-up"></i>
-      </div> -->
-
 
       <footer>
             <a target="_blank" href="#" i class="fa-solid fa-envelope"></i>
@@ -302,8 +317,8 @@
 
       <div id="scrollUp">
             <i class="fa fa-angle-up"></i>
-        </div>
-    <script src="javastyle.js"></script>
+      </div>
+      <script src="javastyle.js"></script>
 
 </body>
 
