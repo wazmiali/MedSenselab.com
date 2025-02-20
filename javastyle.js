@@ -105,3 +105,17 @@ sliderImages.forEach((img) => {
   img.addEventListener("click", pauseAnimation);
   img.addEventListener("mouseleave", resumeAnimation);
 });
+
+
+
+// Update the width of the progress bar as the user scrolls
+window.addEventListener("scroll", function () {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+  document.querySelector(".progress-bar").style.width = scrollPercentage + "%";
+});
+
