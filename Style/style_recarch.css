@@ -1,3 +1,14 @@
+html,
+body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+.CONTAINER5 {
+      flex: 1;
+}
+
 /* Section Styling */
 .research-section {
       padding: 50px 20px;
