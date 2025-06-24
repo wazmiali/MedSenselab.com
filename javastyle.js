@@ -1,27 +1,37 @@
 // This content is used for an image slider with three images on a site. (Start)
+
+const track = document.getElementById("slider-track");
+const images = track.querySelectorAll("img");
+const totalImages = images.length;
+const container = document.getElementById("slider-container");
+
 let currentIndex = 0;
-const slides = document.querySelectorAll(".carousel-image");
+let isHovered = false;
 
-function showSlide(index) {
-  if (index < 0) {
-    index = slides.length - 1;
-  } else if (index >= slides.length) {
-    index = 0;
+function getVisibleImages() {
+  if (window.innerWidth <= 600) return 1;
+  else if (window.innerWidth <= 991) return 2;
+  else return 3;
+}
+
+function slideImages() {
+  if (!isHovered) {
+    const visible = getVisibleImages();
+    currentIndex = (currentIndex + 1) % (totalImages - visible + 1);
+    track.style.transform = `translateX(-${(100 / visible) * currentIndex}%)`;
   }
-  currentIndex = index;
-  const offset = -currentIndex * 100;
-  document.querySelector(
-    ".carousel-slide"
-  ).style.transform = `translateX(${offset}%)`;
 }
 
-function changeSlide(direction) {
-  currentIndex += direction;
-  showSlide(currentIndex);
-}
-setInterval(() => {
-  changeSlide(1);
-}, 3000);
+let sliderInterval = setInterval(slideImages, 1500);
+
+container.addEventListener("mouseenter", () => (isHovered = true));
+container.addEventListener("mouseleave", () => (isHovered = false));
+
+window.addEventListener("resize", () => {
+  currentIndex = 0;
+  track.style.transform = `translateX(0)`;
+});
+
 // (Stop)
 
 // Show the button when the user scrolls down
@@ -73,7 +83,8 @@ function changeImage(direction) {
   } else if (currentImageIndex >= galleryImages.length) {
     currentImageIndex = 0;
   }
-  document.getElementById("modal-img").src = galleryImages[currentImageIndex].src;
+  document.getElementById("modal-img").src =
+    galleryImages[currentImageIndex].src;
 }
 
 // Slider animation handling
@@ -106,8 +117,6 @@ sliderImages.forEach((img) => {
   img.addEventListener("mouseleave", resumeAnimation);
 });
 
-
-
 // Update the width of the progress bar as the user scrolls
 window.addEventListener("scroll", function () {
   const scrollTop = document.documentElement.scrollTop;
@@ -118,4 +127,3 @@ window.addEventListener("scroll", function () {
 
   document.querySelector(".progress-bar").style.width = scrollPercentage + "%";
 });
-
