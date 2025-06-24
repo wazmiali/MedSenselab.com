@@ -10,6 +10,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 .cent {
     margin: 0 auto;
     max-width: 1200px;
@@ -35,32 +36,42 @@ body {
     transition: width 0.1s ease;
 }
 
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: auto;
-    padding: 10px;
+    height: 130px;
+    padding: 10px 20px;
     flex-wrap: nowrap;
-    /* Keep logos in a single line */
     overflow-x: auto;
-    /* Enable scrolling for very small screens */
+    background-color: #fff;
+    /* optional background */
 }
 
 .logo {
     height: auto;
-    max-width: 100%;
+    max-height: 90px;
     object-fit: contain;
-    width: 17%;
-    max-height: 73px;
-    margin: 0 10px;
+    margin: 0 15px;
+    flex-shrink: 0;
+    /* prevent shrinking */
 }
 
-.center-logo {
-    width: 20%;
-    /* Increase the size of the middle logo */
+/* Left and right logos */
+.left-logo,
+.right-logo {
+    width: 18%;
+    /* adjust if needed */
 }
+
+/* Center logo (highlight it more) */
+.center-logo {
+    width: 25%;
+    max-height: 110px;
+}
+
 
 /* Medium screens (tablets or small laptops) */
 @media (max-width: 768px) {
