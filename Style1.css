@@ -74,22 +74,31 @@ body {
 
 @media (max-width: 480px) {
     .header {
-        flex-direction: row;        /* Keep logos in one line */
-        justify-content: center;    /* Center horizontally */
-        align-items: center;        /* Vertically center */
-        padding: 5px 0;             /* Remove extra top/bottom space */
+        flex-direction: row;
+        /* Keep logos in one line */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Vertically center */
+        padding: 5px 0;
+        /* Remove extra top/bottom space */
         height: auto;
-        overflow-x: auto;           /* Scroll if logos overflow */
+        overflow-x: auto;
+        /* Scroll if logos overflow */
     }
 
     .logo,
     .left-logo,
     .center-logo,
     .right-logo {
-        width: 28%;                 /* Equal width */
-        max-height: 60px;           /* Same height */
-        margin: 0 5px;              /* Horizontal spacing */
-        flex-shrink: 0;             /* Prevent shrinking */
+        width: 28%;
+        /* Equal width */
+        max-height: 60px;
+        /* Same height */
+        margin: 0 5px;
+        /* Horizontal spacing */
+        flex-shrink: 0;
+        /* Prevent shrinking */
     }
 }
 
@@ -139,17 +148,50 @@ body {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
     z-index: 1;
-    border-radius: 5px;
-    top: 100%;
+    top: 27px;
     left: 0;
     width: 150px;
+
+    /* Smoother animation styles */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    /* gentler movement */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out,
+        opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out;
+    pointer-events: none;
 }
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    max-height: 500px;
+    /* or content height */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Blue bottom line */
+.dropdown-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #04abe5;
+}
+
+
+
 
 .dropdown-content a {
     display: block;
