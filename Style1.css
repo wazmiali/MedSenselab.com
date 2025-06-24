@@ -72,28 +72,24 @@ body {
     max-height: 110px;
 }
 
-
-/* Medium screens (tablets or small laptops) */
-@media (max-width: 768px) {
-    .logo {
-        width: 20%;
-    }
-
-    .center-logo {
-        width: 23%;
-        /* Slightly larger for tablets */
-    }
-}
-
-/* Small screens (phones) */
 @media (max-width: 480px) {
-    .logo {
-        width: 25%;
+    .header {
+        flex-direction: row;        /* Keep logos in one line */
+        justify-content: center;    /* Center horizontally */
+        align-items: center;        /* Vertically center */
+        padding: 5px 0;             /* Remove extra top/bottom space */
+        height: auto;
+        overflow-x: auto;           /* Scroll if logos overflow */
     }
 
-    .center-logo {
-        width: 28%;
-        /* Keep middle logo larger for small screens */
+    .logo,
+    .left-logo,
+    .center-logo,
+    .right-logo {
+        width: 28%;                 /* Equal width */
+        max-height: 60px;           /* Same height */
+        margin: 0 5px;              /* Horizontal spacing */
+        flex-shrink: 0;             /* Prevent shrinking */
     }
 }
 
