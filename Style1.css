@@ -9,11 +9,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow-x: auto;
+    overflow-y: scroll; */
+    /* height: 100%;
+    display: flex;
+    flex-direction: column; */
 }
 
 .cent {
     margin: 0 auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 
@@ -243,7 +248,7 @@ body {
         justify-content: flex-start;
         padding-left: 20px;
         width: auto;
-/*         border-radius: 4px; */
+        /* border-radius: 4px; */
 
     }
 
@@ -349,7 +354,7 @@ body {
     width: calc(25% - 6px);
     /* Adjust width to accommodate 3px margin on both sides */
     height: auto;
-    object-fit: fill;
+    object-fit: cover;
     flex-shrink: 0;
     margin: 0 3px;
     /* Add 3px space between images */
@@ -488,7 +493,7 @@ footer {
 
 .custom-image-slider {
     width: 100%;
-    max-width: 100% !important;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     margin: 20px auto;
@@ -818,6 +823,3 @@ p.font_8 {
 .contact-card a:hover {
     text-decoration: underline;
 }
-
-
-
