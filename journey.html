@@ -92,6 +92,22 @@
             </script>
 
 
+            <!-- ✅ Loader Logo -->
+                              <div id="loader">
+                                    <img src="lab_img/loder.png" alt="Loading...">
+                              </div>
+
+                              <script>
+                                    // Wait 2 seconds then hide loader
+                                    window.addEventListener("load", function () {
+                                          setTimeout(function () {
+                                                document.getElementById("loader").style.display = "none";
+                                                document.getElementById("main-content").style.display = "block";
+                                          }, 1200); // 2 seconds
+                                    });
+                              </script>
+
+
             <section class="research-section">
                   <div class="container">
                         <div class="section-heading">
