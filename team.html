@@ -120,11 +120,42 @@
 
       <div class="CONTAINER5">
 
-           <div class="header">
-                  <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
-                  <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo">
-                  <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
-              </div>
+                  <div class="header">
+            <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
+            <!-- <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo"> -->
+
+            <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo" style="
+              display: block;
+              margin: 0 auto;
+              animation: bounceIn 1.5s ease-out;
+              height: auto;
+              max-width: 100%;
+            ">
+
+            <!-- Inline <style> tag required to define keyframes -->
+            <style>
+                @keyframes bounceIn {
+                    0% {
+                        transform: scale(0.5);
+                        opacity: 0;
+                    }
+
+                    50% {
+                        transform: scale(1.05);
+                        opacity: 1;
+                    }
+
+                    70% {
+                        transform: scale(0.9);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            </style>
+            <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
+        </div>
 
             <section>
                   <div class="navbar">
