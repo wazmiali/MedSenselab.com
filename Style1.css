@@ -329,7 +329,7 @@ body {
 /* Container for the slider */
 .image-slider {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     margin: 20px auto;
