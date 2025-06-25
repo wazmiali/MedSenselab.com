@@ -81,42 +81,42 @@
 
       <div class="CONTAINER5">
 
-                    <div class="header">
-            <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
-            <!-- <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo"> -->
+            <div class="header">
+                  <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
+                  <!-- <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo"> -->
 
-            <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo" style="
-              display: block;
-              margin: 0 auto;
-              animation: bounceIn 1.5s ease-out;
-              height: auto;
-              max-width: 100%;
-            ">
+                  <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo" style="
+                    display: block;
+                    margin: 0 auto;
+                    animation: bounceIn 1.5s ease-out;
+                    height: auto;
+                    max-width: 100%;
+                  ">
 
-            <!-- Inline <style> tag required to define keyframes -->
-            <style>
-                @keyframes bounceIn {
-                    0% {
-                        transform: scale(0.5);
-                        opacity: 0;
-                    }
+                  <!-- Inline <style> tag required to define keyframes -->
+                  <style>
+                        @keyframes bounceIn {
+                              0% {
+                                    transform: scale(0.5);
+                                    opacity: 0;
+                              }
 
-                    50% {
-                        transform: scale(1.05);
-                        opacity: 1;
-                    }
+                              50% {
+                                    transform: scale(1.05);
+                                    opacity: 1;
+                              }
 
-                    70% {
-                        transform: scale(0.9);
-                    }
+                              70% {
+                                    transform: scale(0.9);
+                              }
 
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-            </style>
-            <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
-        </div>
+                              100% {
+                                    transform: scale(1);
+                              }
+                        }
+                  </style>
+                  <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
+            </div>
 
             <div class="navbar">
                   <div class="logo">Dr. Vinay Sharma</div>
@@ -188,6 +188,78 @@
                         </div>
                   </section>
             </section>
+
+            <style>
+                  /* Container to hold all members */
+                  .team-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        /* gap: 20px; */
+                        padding: 0 0px 30px;
+                  }
+
+                  /* Individual card */
+                  .member-card {
+                        background: #ffffff;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                        width: 260px;
+                        padding: 16px;
+                        transition: transform 0.3s ease;
+                  }
+
+                  .member-card:hover {
+                        transform: scale(1.02);
+                  }
+
+                  /* Image styling */
+                  .member-card img {
+                        width: 100%;
+                        height: 200px;
+                  }
+
+                  /* Text */
+                  .member-card p {
+                        margin: 4px 0;
+                        font-size: 1rem;
+                        color: #333;
+                  }
+
+                  .label {
+                        font-weight: bold;
+                        color: #007bff;
+                  }
+
+                  /* Responsive tweaks */
+                  @media (max-width: 600px) {
+                        .member-card {
+                              width: 100%;
+                        }
+                  }
+            </style>
+
+
+            <h3
+                  style="text-align: center; color: darkblue; font-family: Arial, Helvetica, sans-serif; font-weight: 600; padding: 10px 0; font-size: 27px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                  Brain-Stormtroopers
+            </h3>
+            <div class="team-container">
+                  <div class="member-card">
+                        <img src="Images/female.jpg" alt="Male">
+                        <p class="label">Name</p>
+                        <p>This can be you.</p>
+                        <p>Drop an Email.</p>
+                  </div>
+
+                  <div class="member-card">
+                        <img src="Images/male.jpg" alt="Female">
+                        <p class="label">Name</p>
+                        <p>This can be you.</p>
+                        <p>Drop an Email.</p>
+                  </div>
+            </div>
 
       </div>
 
