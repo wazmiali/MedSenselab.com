@@ -27,52 +27,53 @@
                   flex: 1;
             }
 
-            .section {
-                  margin: 20px auto;
-                  max-width: 800px;
+            /* Container to hold all members */
+            .team-container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  /* gap: 20px; */
+                  padding: 0 0px 30px;
+            }
+
+            /* Individual card */
+            .member-card {
+                  background: #ffffff;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                   text-align: center;
-                  font-family: Arial, sans-serif;
+                  width: 260px;
+                  padding: 16px;
+                  transition: transform 0.3s ease;
             }
 
-            .opening-content {
-                  margin-top: 20px;
+            .member-card:hover {
+                  transform: scale(1.02);
             }
 
-            .opening-content img {
+            /* Image styling */
+            .member-card img {
                   width: 100%;
-                  height: auto;
-                  border-radius: 10px;
+                  height: 200px;
             }
 
-            .caption {
-                  font-size: 14px;
-                  color: #777;
-                  margin: 10px 0;
-            }
-
-            ul {
-                  list-style-type: disc;
-                  margin: 22px;
-                  text-align: left;
-                  max-width: 600px;
-                  line-height: 1.3rem;
-            }
-
-            ul li {
-                  margin-bottom: 10px;
-                  font-size: 16px;
+            /* Text */
+            .member-card p {
+                  margin: 4px 0;
+                  font-size: 1rem;
                   color: #333;
             }
 
-            .contact {
-                  margin-top: 20px;
-                  font-size: 16px;
-                  color: #333;
-            }
-
-            .contact .email {
-                  color: #d9534f;
+            .label {
                   font-weight: bold;
+                  color: #007bff;
+            }
+
+            /* Responsive tweaks */
+            @media (max-width: 600px) {
+                  .member-card {
+                        width: 100%;
+                  }
             }
       </style>
 </head>
@@ -158,91 +159,40 @@
                   }
             </script>
 
-            <section class="cent">
-                  <section>
-                        <div class="section" id="openings">
-                              <h2>Join Our Research Team</h2>
-                              <div class="opening-content">
-                                    <!-- <p class="caption">Beautiful campus view. [Image courtesy of Placeholder University]</p> -->
-                                    <ul>
-                                          <li>Students interested in Nanomaterials for biomedical applications,
-                                                specifically sensors, bioimaging probes, theranostic etc. are
-                                                welcome to contact us by email for Ph.D. and Postdoctoral positions in
-                                                the research group. <strong>E-mail: vinay.sharma@iitjammu.ac.in</strong>
-                                          </li>
+            <div
+                  style="width: 100%; max-width: 1400px; margin: 1px auto; background: #e9f5ff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
-                                          <li>Candidates willing to explore external postdoc awards are welcome
-                                                throughout the year under different programs.</li>
-                                          <!--                                           
-                                          <li>Undergraduate students passionate about innovation are welcome to explore
-                                                project
-                                                opportunities.</li>
-                                    </ul>
-                                    <p class="contact">
-                                          <strong>Interested applicants</strong>, please email your CV and a cover
-                                          letter to
-                                          Dr.
-                                          Smith at <span class="email">drsmith[at]placeholder.edu</span>.
-                                    </p> -->
-                              </div>
-                        </div>
-                  </section>
-            </section>
+                  <h3
+                        style="font-size: 1.4rem; font-family: 'Segoe UI', sans-serif; color: #2c3e50; text-align: center; margin-bottom: 20px;">
+                        Join Our Research Team
+                  </h3>
 
-            <style>
-                  /* Container to hold all members */
-                  .team-container {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        /* gap: 20px; */
-                        padding: 0 0px 30px;
-                  }
+                  <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Segoe UI', sans-serif;">
+                        <li
+                              style="margin-bottom: 15px; font-size: 1rem; line-height: 1.7; color: #333; background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: justify;">
+                              <strong style="display: block; margin-bottom: 8px; color: #0077b6;">Students
+                                    interested in
+                                    Nanomaterials</strong>
+                              for biomedical applications, specifically sensors, bioimaging probes, theranostic etc. are
+                              welcome to contact us by email for Ph.D. and Postdoctoral positions in the research group.
+                              <br><strong>E-mail: <a
+                                          href="mailto:vinay.sharma@iitjammu.ac.in"><u>vinay.sharma@iitjammu.ac.in</u></a></strong>
+                        </li>
 
-                  /* Individual card */
-                  .member-card {
-                        background: #ffffff;
-                        border-radius: 12px;
-                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                        text-align: center;
-                        width: 260px;
-                        padding: 16px;
-                        transition: transform 0.3s ease;
-                  }
+                        <li
+                              style="font-size: 1rem; line-height: 1.6; color: #333; background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: justify;">
+                              <strong style="display: block; margin-bottom: 8px; color: #0077b6;">External
+                                    Postdoc
+                                    Opportunities</strong>
+                              Candidates willing to explore external postdoc awards are welcome throughout the year
+                              under different programs.
+                        </li>
+                  </ul>
 
-                  .member-card:hover {
-                        transform: scale(1.02);
-                  }
-
-                  /* Image styling */
-                  .member-card img {
-                        width: 100%;
-                        height: 200px;
-                  }
-
-                  /* Text */
-                  .member-card p {
-                        margin: 4px 0;
-                        font-size: 1rem;
-                        color: #333;
-                  }
-
-                  .label {
-                        font-weight: bold;
-                        color: #007bff;
-                  }
-
-                  /* Responsive tweaks */
-                  @media (max-width: 600px) {
-                        .member-card {
-                              width: 100%;
-                        }
-                  }
-            </style>
-
+            </div>
 
             <h3
-                  style="text-align: center; color: darkblue; font-family: Arial, Helvetica, sans-serif; font-weight: 600; padding: 10px 0; font-size: 27px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                  style="text-align: center; color: darkblue; font-family: Arial, Helvetica, sans-serif; font-weight: 600; padding: 10px 0; font-size: 1.4rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
                   Brain-Stormtroopers
             </h3>
             <div class="team-container">
