@@ -33,6 +33,14 @@ body {
     z-index: 99;
 }
 
+/* navbar  */
+@media (max-width: 768px) {
+  .navbar {
+    font-weight: normal;
+  }
+}
+/* stop */
+
 /* Scroll progress bar */
 .progress-bar {
     height: 100%;
