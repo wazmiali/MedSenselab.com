@@ -11,7 +11,7 @@ let isHovered = false;
 function getVisibleImages() {
   if (window.innerWidth <= 600) return 1;
   else if (window.innerWidth <= 991) return 2;
-  else return 5;
+  else return 3;
 }
 
 function slideImages() {
