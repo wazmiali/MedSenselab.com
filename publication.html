@@ -60,6 +60,44 @@
             align-items: center;
             margin: 20px 0;
         }
+
+        /* slider start */
+
+        .slider-track {
+            display: flex;
+            width: max-content;
+            animation: scrollSlider 40s linear infinite;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        .slider-track img {
+            height: 200px;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes scrollSlider {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-track img {
+                height: 120px;
+                width: 90px;
+            }
+        }
+
+        /* stop */
+        
     </style>
 
 </head>
@@ -150,94 +188,49 @@
         <section style="margin-left: 5%; margin-right: 5%; max-width: 100%;">
             <h2>Publications</h2>
 
-            <section>
-
-                <div class="image-slider">
-                    <div class="slider-track" style="height: 200px;">
+                            <div class="image-slider">
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- First Set -->
                         <img src="PublicationsImage/cm.jpg" alt="Image 1" />
-                        <img src="PublicationsImage/applide.png" alt="Image 1" />
-                        <img src="PublicationsImage/journal.png" alt="Image 1" />
-                        <img src="PublicationsImage/biomaterial.png" alt="Image 1" />
-                        <img src="PublicationsImage/sensors.png" alt="Image 1" />
-                        <img src="PublicationsImage/small.png" alt="Image 1" />
-                        <img src="PublicationsImage/acs.jpg" alt="Image 1" />
-                        <img src="PublicationsImage/acta.png" alt="Image 1" />
-                        <img src="PublicationsImage/photoc.jpg" alt="Image 1" />
-                        <img src="PublicationsImage/c.png" alt="Image 1" />
+                        <img src="PublicationsImage/applide.png" alt="Image 2" />
+                        <img src="PublicationsImage/journal.png" alt="Image 3" />
+                        <img src="PublicationsImage/biomaterial.png" alt="Image 4" />
+                        <img src="PublicationsImage/sensors.png" alt="Image 5" />
+                        <img src="PublicationsImage/small.png" alt="Image 6" />
+                        <img src="PublicationsImage/acs.jpg" alt="Image 7" />
+                        <img src="PublicationsImage/acta.png" alt="Image 8" />
+                        <img src="PublicationsImage/photoc.jpg" alt="Image 9" />
+                        <img src="PublicationsImage/c.png" alt="Image 10" />
 
+                        <!-- Duplicated for seamless loop -->
+                        <img src="PublicationsImage/cm.jpg" alt="Image 1" />
+                        <img src="PublicationsImage/applide.png" alt="Image 2" />
+                        <img src="PublicationsImage/journal.png" alt="Image 3" />
+                        <img src="PublicationsImage/biomaterial.png" alt="Image 4" />
+                        <img src="PublicationsImage/sensors.png" alt="Image 5" />
+                        <img src="PublicationsImage/small.png" alt="Image 6" />
+                        <img src="PublicationsImage/acs.jpg" alt="Image 7" />
+                        <img src="PublicationsImage/acta.png" alt="Image 8" />
+                        <img src="PublicationsImage/photoc.jpg" alt="Image 9" />
+                        <img src="PublicationsImage/c.png" alt="Image 10" />
                     </div>
                 </div>
+<!-- slider JavaScript -->
+            <script>
+                const sliderTrack = document.getElementById('sliderTrack');
+                let isPaused = false;
 
-                <script>
-
-                    // Gallery
-
-                    // JavaScript to handle the gallery image clicks and modal
-                    let currentImageIndex = 0;
-                    const galleryImages = document.querySelectorAll(".gallery-item img");
-
-                    // Function to open modal with the clicked image
-                    galleryImages.forEach((img, index) => {
-                        img.addEventListener("click", () => {
-                            currentImageIndex = index;
-                            openModal(img.src);
-                        });
-                    });
-
-                    function openModal(src) {
-                        document.getElementById("image-modal").style.display = "block";
-                        document.getElementById("modal-img").src = src;
+                sliderTrack.addEventListener('click', () => {
+                    if (isPaused) {
+                        sliderTrack.style.animationPlayState = 'running';
+                    } else {
+                        sliderTrack.style.animationPlayState = 'paused';
                     }
+                    isPaused = !isPaused;
+                });
+            </script>
 
-                    function closeModal() {
-                        document.getElementById("image-modal").style.display = "none";
-                    }
-
-                    // Function to navigate to the next or previous image
-                    function changeImage(direction) {
-                        currentImageIndex += direction;
-                        if (currentImageIndex < 0) {
-                            currentImageIndex = galleryImages.length - 1;
-                        } else if (currentImageIndex >= galleryImages.length) {
-                            currentImageIndex = 0;
-                        }
-                        document.getElementById("modal-img").src =
-                            galleryImages[currentImageIndex].src;
-                    }
-
-                    // Slider animation handling
-                    // Get the slider track element
-                    const sliderTrack = document.querySelector(".slider-track");
-
-                    // Variable to store animation state
-                    let isPaused = false;
-
-                    // Function to pause the animation
-                    function pauseAnimation() {
-                        if (!isPaused) {
-                            sliderTrack.style.animationPlayState = "paused";
-                            isPaused = true;
-                        }
-                    }
-
-                    // Function to resume the animation
-                    function resumeAnimation() {
-                        if (isPaused) {
-                            sliderTrack.style.animationPlayState = "running";
-                            isPaused = false;
-                        }
-                    }
-
-                    // Add event listeners to each image
-                    const sliderImages = document.querySelectorAll(".slider-track img");
-                    sliderImages.forEach((img) => {
-                        img.addEventListener("click", pauseAnimation);
-                        img.addEventListener("mouseleave", resumeAnimation);
-                    });
-
-                </script>
-            </section>
-
+            
             <ol
                 style="padding-left: 1.2em; text-align: left; line-height: 1.9; font-family: system-ui; font-size: 1rem; list-style-position: outside; aspect-ratio: 16 / 9; object-fit: cover; ">
                 <li>Prakash, S., Sharma, Vinay.* Unveiling Cellular Secrets: Illuminating Carbon Dot Lighthouses for
