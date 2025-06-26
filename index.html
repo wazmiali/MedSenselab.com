@@ -20,6 +20,49 @@
         .CONTAINER5 {
             flex: 1;
         }
+
+        /* Unique slider start */
+        .image-slider-unique {
+            overflow: hidden;
+            width: 100%;
+            height: 200px;
+        }
+
+        .slider-unique-track {
+            display: flex;
+            width: max-content;
+            animation: scrollSliderUnique 40s linear infinite;
+        }
+
+        .slider-unique-track:hover {
+            animation-play-state: paused;
+        }
+
+        .slider-unique-track img {
+            height: 175px;
+            width: 165px;
+            margin-right: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes scrollSliderUnique {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-unique-track img {
+                height: 120px;
+                width: 90px;
+            }
+        }
+
+        /* Unique slider end */
     </style>
 
 </head>
@@ -180,6 +223,48 @@
 
                 </div>
             </div>
+
+            <br>
+
+            <!-- ✅ Unique Slider HTML -->
+            <div class="image-slider-unique">
+                <div class="slider-unique-track" id="sliderUniqueTrack">
+                    <!-- First Set -->
+                    <img src="PublicationsImage/cm.jpg" alt="Image 1" />
+                    <img src="PublicationsImage/applide.png" alt="Image 2" />
+                    <img src="PublicationsImage/journal.png" alt="Image 3" />
+                    <img src="PublicationsImage/biomaterial.png" alt="Image 4" />
+                    <img src="PublicationsImage/sensors.png" alt="Image 5" />
+                    <img src="PublicationsImage/small.png" alt="Image 6" />
+                    <img src="PublicationsImage/acs.jpg" alt="Image 7" />
+                    <img src="PublicationsImage/acta.png" alt="Image 8" />
+                    <img src="PublicationsImage/photoc.jpg" alt="Image 9" />
+                    <img src="PublicationsImage/c.png" alt="Image 10" />
+
+                    <!-- Duplicated for seamless loop -->
+                    <img src="PublicationsImage/cm.jpg" alt="Image 11" />
+                    <img src="PublicationsImage/applide.png" alt="Image 12" />
+                    <img src="PublicationsImage/journal.png" alt="Image 13" />
+                    <img src="PublicationsImage/biomaterial.png" alt="Image 14" />
+                    <img src="PublicationsImage/sensors.png" alt="Image 15" />
+                    <img src="PublicationsImage/small.png" alt="Image 16" />
+                    <img src="PublicationsImage/acs.jpg" alt="Image 17" />
+                    <img src="PublicationsImage/acta.png" alt="Image 18" />
+                    <img src="PublicationsImage/photoc.jpg" alt="Image 19" />
+                    <img src="PublicationsImage/c.png" alt="Image 20" />
+                </div>
+            </div>
+
+            <!-- ✅ Unique Slider JS -->
+            <script>
+                const sliderUnique = document.getElementById('sliderUniqueTrack');
+                let isSliderUniquePaused = false;
+
+                sliderUnique.addEventListener('click', () => {
+                    sliderUnique.style.animationPlayState = isSliderUniquePaused ? 'running' : 'paused';
+                    isSliderUniquePaused = !isSliderUniquePaused;
+                });
+            </script>
 
             <div data-testid="columns" class="V5AUxf">
                 <div id="comp-jxrr8wvg" class="comp-jxrr8wvg YzqVVZ wixui-column-strip__column">
