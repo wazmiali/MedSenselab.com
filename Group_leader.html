@@ -22,7 +22,7 @@
             }
 
             .container {
-                  width: 90%;
+                  width: 100%;
                   max-width: 1200px;
                   margin: auto;
                   padding: 20px;
@@ -34,27 +34,27 @@
             }
 
             section {
-                  margin: 20px 0;
+                  margin-bottom: 25px;
             }
 
-            section h2 {
-                  background-color: #80808029;
-                  color: rgb(3 93 161);
+            h3 {
+                  font-size: 20px;
+                  color: #035da1;
+                  background: #f1f5f9;
                   padding: 10px;
-                  border-radius: 5px;
-                  font-family: system-ui;
-                  width: 100%;
+                  border-left: 5px solid #035da1;
+                  border-radius: 4px;
+                  font-family: 'Segoe UI', sans-serif;
             }
 
-            ul {
-                  list-style-type: disc;
-                  margin: 10px 20px;
+            .para p {
+                  font-size: 16px;
+                  font-family: 'Segoe UI', sans-serif;
                   line-height: 1.5rem;
+                  margin-bottom: 10px;
+                  text-align: justify;
             }
 
-            ul li {
-                  margin-bottom: 10px;
-            }
 
             .row {
                   display: flex;
@@ -66,7 +66,7 @@
             /* Content container with image and text */
             .content-part {
                   background: #f9f9f9;
-                  padding: 20px;
+                  padding: 5px;
                   border-radius: 8px;
                   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                   display: flex;
@@ -82,9 +82,8 @@
             }
 
             .img-part img {
-                  width: 100%;
+                  width: 351px;
                   height: 351px;
-                  border-radius: 5px;
                   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
 
@@ -134,6 +133,11 @@
                         max-width: 100%;
                         width: 100%;
                   }
+
+                  .img-part img {
+
+                        height: 300px;
+                  }
             }
       </style>
 </head>
@@ -142,11 +146,11 @@
 
       <div class="CONTAINER5">
 
-                   <div class="header">
-            <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
-            <!-- <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo"> -->
+            <div class="header">
+                  <img src="lab_img/loder2.png" alt="MedsenseLab" class="logo center-logo">
+                  <!-- <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo"> -->
 
-            <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo" style="
+                  <img src="lab_img/lab_logo2.png" alt="MedsenseLab" class="logo center-logo" style="
               display: block;
               margin: 0 auto;
               animation: bounceIn 1.5s ease-out;
@@ -154,31 +158,31 @@
               max-width: 100%;
             ">
 
-            <!-- Inline <style> tag required to define keyframes -->
-            <style>
-                @keyframes bounceIn {
-                    0% {
-                        transform: scale(0.5);
-                        opacity: 0;
-                    }
+                  <!-- Inline <style> tag required to define keyframes -->
+                  <style>
+                        @keyframes bounceIn {
+                              0% {
+                                    transform: scale(0.5);
+                                    opacity: 0;
+                              }
 
-                    50% {
-                        transform: scale(1.05);
-                        opacity: 1;
-                    }
+                              50% {
+                                    transform: scale(1.05);
+                                    opacity: 1;
+                              }
 
-                    70% {
-                        transform: scale(0.9);
-                    }
+                              70% {
+                                    transform: scale(0.9);
+                              }
 
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-            </style>
-            <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
-        </div>
-            
+                              100% {
+                                    transform: scale(1);
+                              }
+                        }
+                  </style>
+                  <img src="lab_img/iit.png" alt="IIT Logo" class="logo center-logo">
+            </div>
+
             <div class="navbar">
                   <div class="logo">Dr. Vinay Sharma</div>
                   <div class="menu-toggle" onclick="toggleMenu()">
@@ -225,6 +229,7 @@
             </div>
 
             <div class="container">
+
                   <div class="content-part">
                         <!-- Image -->
                         <div class="img-part">
@@ -233,129 +238,125 @@
 
                         <!-- Text -->
                         <div class="text">
-                              <p>
                               <h2>Dr. Vinay Sharma</h2>
-                              <strong>Assistant Professor</strong></p>
-                              <p>Academic Interests
-                                    Bio-active nanomaterials, Biose</p>
-<!--                               <p>Email: vinay.sharma@iitjammu.ac.in</p> -->
-                              <p>E-mail: <a href="mailto:vinay.sharma@iitjammu.ac.in">vinay.sharma@iitjammu.ac.in</a></p>
+                              <p><strong>Assistant Professor</strong></p>
+                              <p>Academic Interests: Bio-active nanomaterials, Biose</p>
+                              <p><strong>E-mail: </strong>
+                                    <a href="mailto:vinay.sharma@iitjammu.ac.in"><b>vinay.sharma@iitjammu.ac.in</b></a>
+                              </p>
 
+                              <div class="btn-part gap">
+                                    <a class="readon yellow-btn"
+                                          href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=H27Z40cAAAAJ&sortby=pubdate"
+                                          target="_blank">Google Scholar</a>
 
-                              <div class="btn-part">
-                                    <a class="readon yellow-btn" href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=H27Z40cAAAAJ&sortby=pubdate" target="_blank" >Google Scholar</a>
+                                    <a class="readon yellow-btn"
+                                          href="https://www.linkedin.com/in/vinay-sharma-36123536/"
+                                          target="_blank">LinkedIn</a>
                               </div>
                         </div>
                   </div>
 
-                  <section>
-                        <h2>Education</h2>
-                        <ul>
-                              <li>2014-01 - 2019-01 Ph.D.: Indian Institute of Technology Indore <br>
-
-                                    Thesis: Multifunctional Nanomaterials for Biosensing and Bioimaging: Insights from
-                                    Metal
-                                    Oxides and Carbon-dots.</li>
-
-                              <li>2010-07 - 2012-07 Master of Technology. Centre For Converging Technologies,
-                                    <br>University
-                                    of
-                                    Rajasthan - Jaipur, India
-                              </li>
-                              <li>Thesis: Evaluation of Hepatotoxicity and Oxidative Stress Induced by Multiwalled
-                                    Carbon
-                                    Nanotubes in Swiss Albino Mice</li>
-                              <li>2006-07 - 2010-06 Bachelor of Technology. <br>
-                                    University of Rajasthan - Jaipur, India</li>
-                        </ul>
-                  </section>
-
-                  <section>
-                        <h2>Research Experience</h2>
-                        <ul>
-                              <li>2019-01 to 2021-01 Postdoctoral Research Funded by Human Frontier Science Program</li>
-
-                              <li>University of California Riverside, California, United States <br>Developed single
-                                    cell
-                                    discrimination technology and single-molecule recapture method using solid-state
-                                    nanopore
-                                    technology.</li>
-
-                              <li>2018-11 to 2019-01 Research Associate <br>
-
-                                    Indian Institute of Technology Indore, Simrol, Madhya Pradesh, India <br>
-
-                                    Developed biosensors for the environment and bioimaging probes for cancer cells.
-                              </li>
+                  <div class="para">
+                        <section>
+                              <h3>Education</h3>
 
 
-                        </ul>
-                  </section>
+                              <p><b>2014-01 - 2019-01</b> Ph.D.: Indian Institute of Technology Indore<br>
+                                    <b>Thesis:</b> Multifunctional Nanomaterials for Biosensing and Bioimaging: Insights
+                                    from
+                                    Metal Oxides and Carbon-dots.
+                              </p>
 
-                  <section>
-                        <h2>Awards and Honors</h2>
-                        <ul>
-                              <li>2024: Member, Royal Society of Chemistry (MRSC)</li>
-                              <li> 2022: Young Associate: Indian Academy of Sciences, 2022-2025</li>
-                              <li> 2020: Ramanujan Fellowship</li>
-                              <li> 2016: CEFIPRA-ESONN fellowship by CEFIPRA, DST, Govt. of India.</li>
-                        </ul>
-                  </section>
+                              <p><b>2010-07 - 2012-07</b> Master of Technology. Centre For Converging Technologies,<br>
+                                    University of Rajasthan - Jaipur, India</p>
 
-                  <section>
-                        <h2>Teaching</h2>
-                        <ul>
-                              <li>Courses:</li>
-                              <li>UG Level: Biology for Engineers, Bioanalytical Methods, Nanobiotechnology.</li>
-                              <li>PG Level: Biosensors, Biomedical nanostructures, Biomaterials and Tissue Engineering
-                              </li>
+                              <p><b>Thesis:</b> Evaluation of Hepatotoxicity and Oxidative Stress Induced by Multiwalled
+                                    Carbon Nanotubes in Swiss Albino Mice</p>
 
-                        </ul>
-                  </section>
+                              <p><b>2006-07 - 2010-06</b> Bachelor of Technology.<br>
+                                    University of Rajasthan - Jaipur, India</p>
+                        </section>
 
-                  <section>
-                        <h2>Administrative Responsibilities</h2>
-                        <ul>
-                              <li>Ongoing:</li>
-                              <li>Associate Dean: Alumni and Corporate Relations (2024 onwards)</li>
-                              <li>Professor In-Charge: MoUs (2024 Onwards)</li>
-                              <li>Chairperson, Department Post-Graduation Committee (DPGC) ( 2022 onwards)</li>
-                              <li>Completed Tenures:</li>
-                              <li>Associate Dean: International Relations and MoUs (2023-2024)</li>
+                        <section>
+                              <h3>Research Experience</h3>
 
-                        </ul>
-                  </section>
+                              <p><b>2019-01 to 2021-01</b> Postdoctoral Research Funded by Human Frontier Science
+                                    Program</p>
 
-                  <section>
-                        <h2>Research Projects</h2>
-                        <ul>
-                              <li>Funded Projects:</li>
-                              <li>Start-up Research Grant: Department of Science and Technology (DST)-Science and
+                              <p>University of California Riverside, California, United States<br>
+                                    Developed single cell discrimination technology and single-molecule recapture method
+                                    using
+                                    solid-state nanopore technology.</p>
+
+                              <p><b>2018-11 to 2019-01</b> Research Associate<br>
+                                    Indian Institute of Technology Indore, Simrol, Madhya Pradesh, India<br>
+                                    Developed biosensors for the environment and bioimaging probes for cancer cells.</p>
+                        </section>
+
+                        <section>
+                              <h3>Awards and Honors</h3>
+
+                              <p><b> 2024:</b> Member, Royal Society of Chemistry (MRSC)</p>
+                              <p><b>2022:</b> Young Associate: Indian Academy of Sciences, 2022-2025</p>
+                              <p><b>2020:</b> Ramanujan Fellowship</p>
+                              <p><b>2016:</b> CEFIPRA-ESONN fellowship by CEFIPRA, DST, Govt. of India.</p>
+                        </section>
+
+                        <section>
+                              <h3>Teaching</h3>
+
+                              <p><b>Courses:</b></p>
+                              <p><b>UG Level:</b> Biology for Engineers, Bioanalytical Methods, Nanobiotechnology.</p>
+                              <p><b>PG Level:</b> Biosensors, Biomedical nanostructures, Biomaterials and Tissue
                                     Engineering
-                                    Research Board (SERB) Government of India. Project Theme: Development of
-                                    Nano-theranostics. Status: Running</li>
-                              <li>Institute Seed Grant: Project Theme: Development of Diagnostic Platforms using
-                                    Nanomaterials. Status: Running</li>
-                              <li>Other External Funded Grants: Project Theme: Antiviral and Antibacterial Products</li>
+                              </p>
+                        </section>
 
-                        </ul>
-                  </section>
+                        <section>
+                              <h3>Administrative Responsibilities</h3>
+
+                              <p>Ongoing:</p>
+                              <p><b>Associate Dean:</b> Alumni and Corporate Relations (2024 onwards)</p>
+                              <p><b>Professor In-Charge:</b> MoUs (2024 Onwards)</p>
+                              <p><b>Chairperson:</b> Department Post-Graduation Committee (DPGC) (2022 onwards)</p>
+
+                              <p><b>Completed Tenures:</b></p>
+                              <p><b>Associate Dean:</b> International Relations and MoUs (2023-2024)</p>
+                        </section>
+
+                        <section>
+                              <h3>Research Projects</h3>
+
+                              <p><b>Funded Projects:</b></p>
+                              <p><b>Start-up Research Grant:</b> Department of Science and Technology (DST)-Science and
+                                    Engineering Research Board (SERB) Government of India. Project Theme: Development of
+                                    Nano-theranostics. Status: Running</p>
+
+                              <p><b>Institute Seed Grant:</b> Project Theme: Development of Diagnostic Platforms using
+                                    Nanomaterials. Status: Running</p>
+
+                              <p><b>Other External Funded Grants:</b> Project Theme: Antiviral and Antibacterial
+                                    Products</p>
+                        </section>
+                  </div>
+
             </div>
       </div>
 
- <footer>
-        <a href="mailto:vinay.sharma@iitjammu.ac.in" style="color: white; text-decoration: none;">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/vinay-sharma-36123536/"><i
-                class="fa-brands fa-linkedin"></i></a>
-        <a target="_blank"
-            href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=H27Z40cAAAAJ&sortby=pubdate">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"
-                width="18" height="18" color="white">
-        </a>
-        <p>&copy; 2025 MedSense Lab.</p>
-    </footer>
+      <footer>
+            <a href="mailto:vinay.sharma@iitjammu.ac.in" style="color: white; text-decoration: none;">
+                  <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/vinay-sharma-36123536/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank"
+                  href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=H27Z40cAAAAJ&sortby=pubdate">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+                        alt="Google Scholar" width="18" height="18" color="white">
+            </a>
+            <p>&copy; 2025 MedSense Lab.</p>
+      </footer>
 
       <div id="scrollUp">
             <i class="fa fa-angle-up"></i>
