@@ -359,7 +359,7 @@ body {
 
 /* Individual images */
 .slider-track img {
-    width: calc(25% - 6px);
+    width: calc(19% - 6px);
     /* Adjust width to accommodate 3px margin on both sides */
     height: auto;
     object-fit: fill;
