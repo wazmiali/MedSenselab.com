@@ -420,13 +420,6 @@ body {
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    margin-top: 20px;
-}
-
 .gallery-header {
     text-align: center;
     margin: auto;
@@ -532,16 +525,6 @@ footer {
 
 /* Stop */
 
-footer a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 #scrollUp {
     text-align: center;
     bottom: 40px;
@@ -564,26 +547,6 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003f87de;
-    color: white;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-}
-
-footer img {
-    vertical-align: middle;
-}
-
 #scrollUp {
     position: fixed;
     bottom: 20px;
@@ -601,15 +564,6 @@ footer img {
 }
 
 @media (max-width: 768px) {
-    footer a {
-        font-size: 16px;
-        margin: 5px;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-
     #scrollUp {
         bottom: 15px;
         right: 15px;
@@ -619,16 +573,6 @@ footer img {
 }
 
 @media (max-width: 480px) {
-    footer a {
-        font-size: 14px;
-        margin: 3px;
-        display: inline-block;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-
     #scrollUp {
         bottom: 10px;
         right: 10px;
@@ -791,12 +735,11 @@ p.font_8 {
 }
 
 .updates h2 {
-    font-size: 1.7rem;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 10px;
     padding: 0px 56px 0px;
     color: rgb(14, 14, 44);
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .contact-card {
@@ -821,3 +764,29 @@ p.font_8 {
 .contact-card a:hover {
     text-decoration: underline;
 }
+
+ /* footer start */
+ .site-footer {
+    background: #003f87de;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #00b4d8;
+}
+
+/* footer end */
