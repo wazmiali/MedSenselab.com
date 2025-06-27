@@ -791,11 +791,12 @@ p.font_8 {
 }
 
 .updates h2 {
-    font-size: 36px;
+    font-size: 1.7rem;
     text-align: left;
     margin-bottom: 10px;
     padding: 0px 56px 0px;
     color: rgb(14, 14, 44);
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .contact-card {
