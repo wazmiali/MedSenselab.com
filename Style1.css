@@ -241,6 +241,8 @@ body {
         display: flex;
         width: auto;
         z-index: 999;
+        align-items: self-start;
+        margin-top: 4.5rem;
     }
 
     .nav-links a {
@@ -265,6 +267,7 @@ body {
 
     .dropdown.open .dropdown-content {
         display: flex;
+        flex-direction: column;
     }
 }
 
