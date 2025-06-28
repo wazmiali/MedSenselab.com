@@ -127,3 +127,17 @@ window.addEventListener("scroll", function () {
 
   document.querySelector(".progress-bar").style.width = scrollPercentage + "%";
 });
+
+
+
+// navbar for phone view 
+document.querySelectorAll(".dropdown > a").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // Prevent link default
+      const dropdown = this.parentElement;
+      dropdown.classList.toggle("open");
+    }
+  });
+});
+
