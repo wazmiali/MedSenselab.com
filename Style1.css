@@ -9,7 +9,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     overflow-x: hidden;
 }
 
@@ -230,7 +229,7 @@ body {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: #003f87;
+        background: #003f87d1;
         position: absolute;
         top: 60px;
         left: 0;
@@ -239,7 +238,7 @@ body {
 
     .nav-links.active {
         display: flex;
-        width: auto;
+        width: 190px;
         z-index: 999;
         align-items: self-start;
         margin-top: 4.5rem;
@@ -768,8 +767,8 @@ p.font_8 {
     text-decoration: underline;
 }
 
- /* footer start */
- .site-footer {
+/* footer start */
+.site-footer {
     background: #003f87de;
     color: white;
     text-align: center;
