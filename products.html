@@ -112,23 +112,6 @@
             </script>
 
             <!-- Products Section -->
-            <!-- <div
-                  style="width: 100%; max-width: 1100px; margin: 1px auto; padding: 30px; background-color: #f5faff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);">
-                  <h2
-                        style="text-align: center; font-size: 1.5rem; font-family: 'Segoe UI', sans-serif, sans-serif; color: #2c3e50; margin-bottom: 25px;">
-                        Our Products
-                  </h2>
-                  <ul
-                        style="list-style: none; padding: 0; font-family: 'Segoe UI', sans-serif, sans-serif; font-size: 1.1rem; color: #333; line-height: 2;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">MedSense SecretScript</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">MedSense DetectTB</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">MedSense ArtiPerOx</li>
-                        <li style="padding: 8px 0;">MedSense ArtiCAT</li>
-                  </ul>
-            </div> -->
-
-
-
             <section id="products"
                   style="padding: 15px 0; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
                   <div style="max-width: 1200px; margin: auto; padding: 0 20px;">
@@ -136,50 +119,88 @@
                               <strong>Our Products</strong>
                         </h2>
 
-                        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+                        <style>
+                              @media screen and (max-width: 768px) {
+                                    .product-item {
+                                          flex-direction: column !important;
+                                          text-align: center;
+                                    }
 
-                              <!-- MedSense SecretScript -->
-                              <div
-                                    style="flex: 1 1 22%; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
-                                    <img src="image.png" alt="MedSense SecretScript"
-                                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                    <h4 style="margin-top: 15px; font-size: 1.1rem; color: #111;">MedSense SecretScript
-                                    </h4>
-                                    <p style="font-size: 0.95rem; color: #444;">        .</p>
+                                    .product-item img {
+                                          margin: 0 auto;
+                                    }
+                              }
+                        </style>
+
+                        <!-- Product 1: SecretScript -->
+                        <div class="product-item"
+                              style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 40px; gap: 20px;">
+                              <img src="products_image/secret_script.png" alt="MedSense SecretScript"
+                                    style="width: 100%; max-width: 300px; height: 200px; object-fit: fill; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                              <div style="flex: 1; min-width: 250px; text-align: justify;">
+                                    <h3 style="margin-bottom: 10px;">MedSense SecretScript</h3>
+                                    <p>Designed for forensic marking and anti-counterfeiting, SecretScript is used to
+                                          covertly tag documents, products, or materials. The ink remains invisible
+                                          under normal lighting, becoming visible only under specific conditions making
+                                          it ideal for verifying authenticity and tracing items or investigations.</p>
+                                    <strong>Typical Use Cases:</strong>
+                                    <ul style="padding-left: 20px; text-align: left;">
+                                          <li><b>Pharmaceutical packaging:</b> Hidden security codes to authenticate
+                                                medication.</li>
+                                          <li><b>Luxury goods:</b> Covert markers or invisible barcodes to guarantee
+                                                product authenticity.</li>
+                                          <li><b>Legal docs & forensic samples:</b> Tagging evidence and documents for
+                                                secure inspection only under specific conditions.</li>
+                                    </ul>
                               </div>
+                        </div>
 
-                              <!-- MedSense DetectTB -->
-                              <div
-                                    style="flex: 1 1 22%; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
-                                    <img src="images/products/detectTB.jpg" alt="MedSense DetectTB"
-                                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                    <h4 style="margin-top: 15px; font-size: 1.1rem; color: #111;">MedSense DetectTB</h4>
-                                    <p style="font-size: 0.95rem; color: #444;"> .</p>
+                        <!-- Product 2: DetectTB -->
+                        <div class="product-item"
+                              style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 40px; flex-direction: row-reverse; gap: 20px;">
+                              <img src="products_image/detect_tb.png" alt="MedSense DetectTB"
+                                    style="width: 100%; max-width: 300px; height: 200px; object-fit: fill; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                              <div style="flex: 1; min-width: 250px; text-align: justify;">
+                                    <h3 style="margin-bottom: 10px;">MedSense DetectTB</h3>
+                                    <p>An innovative point-of-care diagnostic tool designed to identify active
+                                          tuberculosis (TB) early – within just 30 minutes – using a simple blood serum
+                                          sample.</p>
                               </div>
+                        </div>
 
-                              <!-- MedSense ArtiPerOx -->
-                              <div
-                                    style="flex: 1 1 22%; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
-                                    <img src="images/products/artiPerOx.jpg" alt="MedSense ArtiPerOx"
-                                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                    <h4 style="margin-top: 15px; font-size: 1.1rem; color: #111;">MedSense ArtiPerOx
-                                    </h4>
-                                    <p style="font-size: 0.95rem; color: #444;">. </p>
+                        <!-- Product 3: ArtiCAT -->
+                        <div class="product-item"
+                              style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 40px; gap: 20px;">
+                              <img src="products_image/arti_cat.png" alt="MedSense ArtiCAT"
+                                    style="width: 100%; max-width: 300px; height: 200px; object-fit: fill; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                              <div style="flex: 1; min-width: 250px; text-align: justify;">
+                                    <h3 style="margin-bottom: 10px;">MedSense ArtiCAT</h3>
+                                    <p>
+                                          An artificial catalase enzyme that is relatively inexpensive, quick to act,
+                                          highly specific and does not require low temp storage.
+                                          <span style="color: red;">Academicians can reach out to us for free sample and
+                                                Beta Testing!!</span>
+                                    </p>
                               </div>
+                        </div>
 
-                              <!-- MedSense ArtiCAT -->
-                              <div
-                                    style="flex: 1 1 22%; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
-                                    <img src="images/products/artiCAT.jpg" alt="MedSense ArtiCAT"
-                                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                    <h4 style="margin-top: 15px; font-size: 1.1rem; color: #111;">MedSense ArtiCAT</h4>
-                                    <p style="font-size: 0.95rem; color: #444;"> .</p>
+                        <!-- Product 4: ArtiPerOx -->
+                        <div class="product-item"
+                              style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 40px; flex-direction: row-reverse; gap: 20px;">
+                              <img src="products_image/arti_perox.png" alt="MedSense ArtiPerOx"
+                                    style="width: 100%; max-width: 300px; height: 200px; object-fit: fill; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+                              <div style="flex: 1; min-width: 250px; text-align: justify;">
+                                    <h3 style="margin-bottom: 10px;">MedSense ArtiPerOx</h3>
+                                    <p>
+                                          An artificial Peroxidase enzyme that is highly specific, stable, inexpensive,
+                                          ultrafast and can be stored at room temperature.
+                                          <span style="color: red;">Academicians can reach out to us for free sample and
+                                                Beta Testing!!</span>
+                                    </p>
                               </div>
-
                         </div>
                   </div>
             </section>
-
 
       </div>
 
